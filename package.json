@@ -45,6 +45,7 @@
     "name": "kapinski",
     "version": "1.0.0",
     "main": "index.js",
+    "repository": "https://github.com/cutme/kapinski.git",
     "author": "Bartosz Mediger <info@cutme.pl>",
     "license": "MIT",
     "dependencies": {
