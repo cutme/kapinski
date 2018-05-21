@@ -1,0 +1,75 @@
+.c-opinionscarousel {
+    @extend %rel;
+    
+
+    &:after {
+        @extend %abs;
+        @extend %abs-after;
+        z-index: -1;
+        left: 620px; top: 200px;
+        font-family: 'icomoon';
+        font-size: rem(190);
+        line-height: 1;
+        opacity: .5;
+        color: white;
+        content: "\e90b";
+        
+        @media screen and ( max-width: $base + px) {
+            left: grid(620, $base - 880);
+        }
+    }
+
+
+    &__header {
+        margin-bottom: 40px;
+        color: $c-brown;
+    }
+
+    &__item {
+        @extend %rel;
+        width: 960px;
+        margin-right: 160px;
+        padding: 40px 40px 40px 64px;
+        
+        @media screen and ( max-width: $base + px) {
+            width: calc( 100% - 320px );
+            margin-right: grid(160);
+        }
+        
+        @media screen and ( max-width: $tablet + px) {
+            padding: 40px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px) {
+            width: calc( 100% - 160px );
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 90%;
+        }
+    }
+    
+    &__author {
+        font-size: rem(21);
+    }
+    
+    &__position {
+        font-size: rem(16);
+    }
+    
+    article {
+        line-height: 1.5;
+        
+        p {
+            margin-bottom: 1em;
+            font: {
+                size: rem(24);
+                weight: $light;
+            }
+            
+            @media screen and ( max-width: $tablet + px) {
+                font-size: rem(18);
+            }
+        }
+    }
+}

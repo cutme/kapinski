@@ -1,0 +1,147 @@
+.c-footer {
+    @extend %rel;
+    background-color: $c-brown;
+    padding: {
+        top: 80px;
+        bottom: 80px;
+    }
+    color: white;
+    
+    @media screen and ( max-width: $smartphone + px) {
+        padding: 40px 20px;
+    }
+    
+    &:after {
+        @extend %abs;
+        @extend %abs-after;
+        left: 0; top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/logo-kapinski--sign-white.svg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: -18% center;
+        opacity: .05;
+    }
+    
+    address {
+        margin-bottom: 30px;
+        font-weight: $bold;
+    }
+    
+    &__author {
+        font-weight: $bold;
+
+        a {
+            color: white;
+        }
+        
+        span {
+            color: $c-brown2;
+        }
+    }
+    
+    &__col {
+        width: 50%;
+        line-height: 1.6;
+        
+        &:first-of-type {
+            @media screen and ( min-width: $tablet_portrait + 1px) {
+                padding-right: 20px;
+            }
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    &__content {
+        @extend %flex;
+        @extend %flex-space-between;
+        @extend %flex-wrap;
+        width: 960px;
+        
+        @media screen and ( max-width: $wrap1 + px ) {
+            width: 100%;
+        }
+    }
+    
+    &__directions {
+        font-weight: $bold;
+    }
+    
+    &__email {
+        font-weight: $bold;
+    }
+    
+    &__lead {
+        margin-bottom: .5em;
+        font-size: rem(22);
+        opacity: .3;
+    }
+    
+    &__logo {
+        @extend %flex;
+        @extend %flex-y;
+        
+        
+        @media screen and ( min-width: $tablet_portrait + 1px) {
+            transform: translateX(-60px);
+        }
+
+        img {
+            margin-right: 15px;
+        }
+
+        span {
+            font-weight: $bold;
+        }
+    }
+    
+    &__row {
+        margin-bottom: 70px;
+        
+        @media screen and ( max-width: $smartphone + px) {
+            margin-bottom: 30px;
+        }
+        
+        &--half {
+            width: 50%;
+        }
+        
+        &--two {
+            @extend %flex;
+            
+        }
+    }
+    
+    &__tel {
+        font: {
+            size: rem(24);
+            weight: $bold;
+        }
+    }
+    
+    .o-content {
+    
+        &__main {
+            @media screen and ( max-width: $tablet_portrait + px) {
+                padding-right: 0;
+            }
+        }
+
+        &__sidebar {
+            @media screen and ( max-width: $tablet_portrait + px) {
+                display: flex;
+                justify-content: center;
+                padding: {
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,33 @@
+.c-opinions {
+    overflow: hidden;
+
+    &--bg {
+        margin-bottom: 360px;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 50px;
+        }
+
+        .o-content {
+            background-image: url(../img/bg/opinions.jpg);
+            padding: 215px 0 100px 0;
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding: 50px 0;
+            }
+        }
+    }
+
+    .o-content {
+        &__main {
+            padding-right: 0;
+        }
+        
+        &__sidebar {
+                    
+            @media screen and ( max-width: $smartphone_portrait + px) {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

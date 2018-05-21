@@ -1,0 +1,48 @@
+.c-business {
+    margin-bottom: 320px;
+    
+    @media screen and ( max-width: $tablet + px ) {
+        margin-bottom: 50px;
+    }
+    
+    &__content {
+        width: 1120px;
+        padding-left: 64px;
+        
+        @media screen and ( max-width: $base + px ) {
+            width: 100%;
+            padding-left: grid(64, 1120);
+        }
+    }
+    
+    &__lead {
+        margin-bottom: 40px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        font-size: rem(20);
+        color: $c-brown;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            br {
+                display: none;
+            }
+        }
+    }
+    
+    li {
+        font-size: rem(17);
+        
+        
+    }
+    
+    .o-content {
+        background-image: url(../img/bg/business.jpg);
+        padding: 70px 0;
+
+        &__main {            
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                padding-right: 160px;
+            }
+        }
+    }
+}

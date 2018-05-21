@@ -1,0 +1,29 @@
+.c-why {
+    overflow: hidden;
+    margin-bottom: 270px;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-bottom: 50px;
+    }
+
+    .o-content {
+        background-image: url(../img/bg/why.jpg);
+        padding: {
+            top: 100px;
+            bottom: 100px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: 50px 40px;
+            
+            &__main {
+                padding-right: 0;
+            }
+        }
+        
+    }
+    
+    .o-header {
+        transform: translateY(20%);
+    }
+}

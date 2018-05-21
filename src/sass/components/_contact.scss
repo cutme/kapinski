@@ -1,0 +1,30 @@
+.c-contact {
+    
+    .o-content {
+        &__main {
+            @media screen and ( min-width: $smartphone + 1px) {
+                padding-right: 160px;
+            }
+            
+            @media screen and ( max-width: $smartphone + px) {
+                padding-right: 0;
+            }
+        }
+        
+        &__sidebar {
+            @media screen and ( max-width: $tablet + px ) {
+                padding-left: 0;
+            }
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px) {
+            padding: 0 40px;
+        }
+    }    
+    
+    .o-header {
+        @media screen and ( min-width: $tablet_portrait + 1px) {
+            transform: translateY(-66%);
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.c-accordion {
+    width: 800px;
+    
+    @media screen and ( max-width: $wrap3 + px ) {
+        width: 100%;
+    }
+  
+    i {
+        @extend %abs;
+        right: -30px; top: 6px;
+        width: 24px; height: 24px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            right: -20px;
+            top: 0;
+        }
+        
+        &:after,
+        &:before {
+            @extend %abs;
+            @extend %abs-after;
+            background-color: $c-brown;
+        }
+        
+        &:after {
+            @extend %anim-easeout;
+            left: 50%;
+            
+            width: 2px; height: 100%;
+            transform-origin: center;
+            
+        }
+        
+        &:after {
+            transform: rotate(0) translateX(-50%);
+            opacity: 1;
+        }
+        
+        &:before {
+            @extend %abs-y;
+            width: 100%;
+            height: 2px;
+        }
+    }
+
+    &__item {
+        @extend %rel;
+        transition-duration: 1s;
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 20px 64px;
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            padding: 20px grid(64, 800);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding: 20px 40px;
+        }
+        
+        &.is-active {
+            padding: 30px 64px;
+            
+            @media screen and ( max-width: $wrap3 + px ) {
+                padding: 30px grid(64, 800);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                padding: 30px 40px;
+            }
+
+            i {
+                @media screen and ( max-width: $tablet + px ) {
+                    top: -4px;
+                }
+
+                &:after {
+                    transform: rotate(90deg) translateX(-50%);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    
+    &__content {
+        @extend %anim-easeout;
+        max-height: 0;
+        font-size: rem(17);
+        overflow: hidden;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            font-size: rem(15);
+        }
+        
+        p {
+            @extend %anim-easeout;
+            transition-delay: 1s;
+            transform: translateY(110%);
+            opacity: 0;
+            
+            .is-active & {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        
+        .is-active & {
+            max-height: 500px;
+            padding: 20px 0;
+        }
+        
+    }
+    
+    .o-header__secondary {
+        @extend %rel;
+        cursor: pointer;
+        color: $c-blue;
+    }   
+}

@@ -1,0 +1,129 @@
+.o-content {
+    @extend %bg-cover;    
+    width: 100%;
+    
+    @media screen and ( min-width: $tablet + 1px ) {
+        display: flex;
+    }
+
+    &__main {
+        padding-right: 160px;        
+        
+        @media screen and ( min-width: $tablet + 1px ) {
+            flex: 1;
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-right: get-vw-tablet(160);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding-right: 40px;
+        }
+    }
+
+    &__sidebar {
+        flex-shrink: 0;
+        width: 480px;
+
+        @media screen and ( max-width: $wrap1 + px ) {
+            width: grid(480, $wrap1 - 160);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 100%;
+            padding-right: get-vw-tablet(160);
+            padding-bottom: 60px;
+            padding-left: 40px;
+        }
+
+        &--wide {
+            width: 640px;
+            
+            @media screen and ( max-width: $wrap1 + px ) {
+                width: grid(640, $wrap1 - 160);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                width: 100%;
+            }
+        }
+
+        .o-wrap--indent & {
+            
+            
+            @media screen and ( max-width: $wrap1 + px ) {
+                width: grid(480, $wrap1 - 320);
+            }
+            
+            @media screen and ( min-width: $wrap3 + 1px ) {
+                margin-left: -160px;
+            }
+            
+            @media screen and ( max-width: $wrap3 + px ) {
+                margin-left: -80px;
+            }
+                        
+            @media screen and ( max-width: $tablet + px ) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .o-header {
+        padding-right: 20px;
+    }
+    
+    &--article {
+        
+        @extend %flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            flex-direction: column-reverse;
+        }
+
+        .o-content__main {
+            max-width: 896px;
+            padding-right: 96px;
+            
+            @media screen and ( max-width: $wrap1 + px ) {
+                max-width: none;
+                width: grid(896, $wrap1);
+                padding-right: grid(96, $wrap1);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                width: 100%;
+                padding-right: get-vw-tablet(160);
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding-right: 40px;
+            }
+        }
+
+        .o-content__sidebar {
+            width: 544px;
+            padding-right: 160px;
+            margin: 0 !important;
+            
+            @media screen and ( max-width: $wrap1 + px ) {
+                width: grid(544, $wrap3);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                width: 100%;
+                padding-right: get-vw-tablet(160);
+                padding-left: 0;
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding-right: 40px;
+            }
+        }
+        
+    }
+}

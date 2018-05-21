@@ -1,0 +1,36 @@
+.c-nav {
+    &__content {
+        @extend %flex;
+        @extend %flex-wrap;
+    }
+
+    &__item {
+        width: 50%;
+        margin-bottom: 4px;
+    }
+    
+    a {
+        font: {
+            size: rem(15);
+            weight: $bold;
+        }
+    }
+    
+    &--top {
+        @extend %abs;
+        top: 46px; left: grid(950, $base - 160);
+        width: grid(630, $base - 160);
+        
+        @media screen and ( max-width: $tablet_portrait + px) {
+            display: none;
+        }
+        
+        a {
+            color: $c-blue; 
+        }
+    }
+}
+
+
+
+

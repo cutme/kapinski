@@ -1,0 +1,64 @@
+.o-btn {
+    @extend %anim;
+    @extend %flex-xy;
+    @extend %rel;
+    display: inline-flex;
+    text: {
+        align: center;
+        transform: uppercase;
+        decoration: none !important;
+    }
+    font-size: rem(18);
+    line-height: 1;
+    color: white;
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        font-size: rem(16);
+    }
+    
+    span {
+        @extend %flex;
+        @extend %flex-y;
+        min-height: 64px;
+        background-color: $c-brown;
+        padding: 16px 40px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            padding: 10px 20px;
+        }
+        
+    }
+    
+    &:after {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %anim;
+        z-index: -1;
+        left: 0; top: 0;        
+        width: 100%; height: 100%;
+        background-color: $c-brown;
+        opacity: .8;
+        visibility: hidden;
+    }
+
+    &:hover {
+        &:after {
+            visibility: visible;
+            transform: translate3d(15px, 15px, 0);
+            opacity: .15;
+        }
+    }
+
+    &--white {
+        span {
+            background-color: white;
+            color: $c-brown;
+        }
+    }
+}
+
+.no-wrap {
+    white-space: nowrap;
+}

@@ -1,0 +1,32 @@
+.c-practices {
+
+    &__info {
+        padding-left: 160px;
+        font-size: rem(17);
+        
+        @media screen and ( max-width: $base + px ) {
+            //padding-left: grid(160, 640);
+            padding-left: get-vw-base(160);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px) {
+            padding-left: 0;
+        }
+                
+        article {
+            margin-bottom: 60px;
+        }
+    }
+
+    .o-header {
+        margin: 60px 0;
+    }
+
+    .o-wrap {
+        @extend %flex;
+    }
+    
+    .swiper-container {
+        max-height: 500px;
+    }
+}

@@ -1,0 +1,151 @@
+.c-scroll {
+    @extend %rel;
+
+    &__item {
+        @extend %rel;
+        transition-duration: 2000ms !important;
+        display: block;
+        
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            @extend %anim;
+            left: 0; top: 0;
+            z-index: -1;
+            width: calc(100% - 1px); height: 100%;
+            background-color: white;
+            transform-origin: bottom;
+            transform: scaleY(0);
+            opacity: 0;
+        }
+        
+        &:hover {
+            &:after {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__nav {
+        @extend %abs;
+        @extend %flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        right: 0; top: 0;
+        width: 160px;
+        height: 100%;
+        
+        @media screen and ( max-width: $base + px) {
+            width: grid(160, 960);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            right: -40px;
+            width: 80px;
+        }
+        
+        i {
+            @extend %anim;
+            display: block;
+            font-size: rem(90);
+            cursor: pointer;
+
+            &:not(.is-inactive) {
+                &:hover {
+                    color: $c-brown;
+                    
+                     &.icon-arrow-2--down {
+                        transform: translateY(5px);
+                    }
+                    
+                    &.icon-arrow-2--up {
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+            
+            &.is-inactive {
+                opacity: .2;
+            }
+            
+           
+        }
+    }
+    
+    &--practices {
+        width: 960px;
+        padding: 0 160px;
+        
+        @media screen and ( max-width: $base + px ) {
+            width: 100%;
+            padding: 0 get-vw-base(160);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: 0 40px;
+        }
+
+        .c-scroll__item {
+            @extend %rel;
+            @extend %anim;
+            margin-bottom: 20px;
+            padding: 30px 40px 35px 40px;
+            
+            @media screen and ( max-width: $base + px ) {
+                padding: get-vw-base(30) get-vw-base(40) get-vw-base(35) get-vw-base(40);
+            }
+
+            border: {
+                bottom: 1px solid rgba($c-blue, .2);
+                right: 1px solid rgba($c-blue, .2);
+            }
+        }
+    }
+    
+    &--worth {
+        width: 1120px;
+        padding-right: 160px;
+        
+        @media screen and ( max-width: $base + px ) {
+            width: 100%;
+            padding-right: grid(160, 1120);
+        }
+
+        .c-scroll__item {
+            padding: 15px 64px;
+            margin-bottom: 20px;
+            
+            .c-article {
+                display: none;
+            }
+            
+            &.is-active {
+                background-color: white;
+                padding: {
+                    top: 25px;
+                    bottom: 25px;
+                }
+                
+                .c-article {
+                    display: block;
+                }
+                
+                .o-header__secondary {
+                    color: $c-brown;
+                }
+            }
+        }
+        
+        .o-header__secondary {
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+    }
+    
+    .o-header__secondary {
+        margin-bottom: 10px;
+        color: $c-blue;
+    }    
+}

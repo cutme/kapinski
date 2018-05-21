@@ -1,0 +1,20 @@
+.c-social {
+    @extend %flex;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        justify-content: center;
+    }
+    
+
+    li {
+        &:first-child {
+            margin-right: 20px;
+            padding-right: 20px;
+            border-right: 1px solid white;
+        }
+    }
+    
+    [class^="icon-"] {
+        font-size: rem(20);
+    }
+}

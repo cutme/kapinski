@@ -1,0 +1,401 @@
+.c-blog {
+
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        padding: {
+            left: 40px;
+            right: 40px;
+            top: 40px;
+        }
+    }
+
+    &__archive {
+        border-bottom: 1px solid $c-gray3;
+        
+        li {
+            margin-bottom: 20px;
+            
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                padding-left: 30px;
+            }
+        }
+        
+        a {
+            &:hover {
+                color: $c-brown;
+            }
+        }
+    }
+    
+    &__author {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        border-bottom: 1px solid $c-gray3;
+        font-size: rem(14);
+        text-transform: uppercase;
+        
+        img {
+            max-width: none;
+        }
+
+        dl, ul {
+            @extend %flex;
+            line-height: 1.4;            
+        }
+        
+        dt {
+            margin-right: 20px;
+        }
+        
+        dd {
+            margin-top: -4px;
+        }
+        
+        ul {
+            @extend %flex-wrap;
+        }
+
+        li {
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                margin-right: 10px;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                margin-bottom: 5px;
+            }
+            
+            text-transform: uppercase;
+        }
+        
+        a {
+            text-decoration: none !important;
+            color: $c-gray2 !important;
+        }
+
+        
+        p {
+            font-weight: $bold;
+            color: $c-brown;
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    
+    &__categories {
+        margin: -50px 0 90px 0;
+        padding-right: 160px;
+        font-size: rem(15);
+        line-height: 1.2;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-right: get-vw-tablet(160);
+        }
+        
+        ul {
+            @extend %flex;
+            @extend %flex-wrap;
+        }
+        
+        li {
+            margin: 0 20px 5px 0;
+            
+            &.current {
+                a {
+                    color: $c-blue;
+                }
+            }
+        }
+        
+        a {
+            text-transform: uppercase;
+            color: $c-gray2;
+            
+            &:hover {
+                color: $c-blue;
+            }
+        }
+        
+    }
+    
+    &__cloudtags {
+        ul {
+            @extend %flex;
+            @extend %flex-wrap;
+            
+            li {
+                margin: 0 10px 10px 0;
+                
+                a {
+                    @extend %rel;
+                    display: block;
+                    background-color: white;
+                    padding: 10px 20px;
+                    overflow: hidden;
+                    color: $c-brown;
+                    
+                    &:after {
+                        @extend %abs;
+                        @extend %abs-after;
+                        @extend %anim;
+                        z-index: -1;
+                        left: 0; top: 0;
+                        width: 100%; height: 100%;
+                        background-color: $c-brown;
+                        transform: translate3d(0,100%,0);
+                    }
+                    
+                    &:hover {
+                        color: white;
+
+                        &:after {
+                            transform: translate3d(0,0,0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__post {
+        margin-bottom: 70px;
+
+        a {
+            text-decoration: underline;
+            color: $c-brown;
+        }
+    }
+
+    &__date {
+        @extend %rel;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-size: rem(14);
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .icon-printer {
+            @extend %abs;
+            right: 0; top: 0;
+            font-size: rem(36);
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                top: 60px;
+                font-size: rem(30);
+            }
+            
+        }
+    }
+    
+    &__excerpt {
+        p {
+            margin-bottom: 2.5em;
+            font-size: rem(18);
+            color: $c-gray2;
+        }
+        
+        &--big {
+
+            p {
+                margin-bottom: 1em;
+                line-height: 1.2;
+                font-size: rem(30);
+                color: $c-blue;
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    font-size: rem(24);
+                }
+            }
+        }
+    }
+    
+    &__extras {
+        margin-bottom: 50px;
+        
+        .o-header__secondary {
+            margin-bottom: 30px;
+            
+            color: $c-blue;
+            
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                padding-left: 30px;
+            }
+        }
+    }
+
+    &__help {
+        margin-bottom: 50px;
+        text-align: center;
+        
+        p {
+            margin-bottom: 50px;
+            font-size: rem(18);
+            color: $c-blue;
+        }
+    }
+    
+    &__image {
+        margin-bottom: 30px;
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            margin: {
+                left: -40px;
+                right: -40px;
+            }
+            width: calc(100% + 80px);
+        
+        }
+    }
+    
+    &__more {
+        @extend %flex;
+        justify-content: flex-end;
+    }
+    
+    &__pagination {
+        @extend %flex;
+        @extend %flex-space-between;
+        margin-bottom: 60px;
+        padding: {
+            bottom: 80px;
+            top: 60px;
+        }
+        border-bottom: 1px solid $c-gray3;
+    }
+    
+    &__popular {
+    
+        .o-header__secondary {
+            margin-bottom: 10px;
+        }
+        
+        li {
+            
+            border-bottom: 1px solid $c-gray3;
+            
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                padding-left: 30px;
+            }
+            
+            a {
+                display: block;
+                padding: 20px 0;
+                font-size: rem(16);
+                
+                &:hover {
+                    color: $c-brown;
+                }
+            }
+            
+        }
+    }
+
+    &__share {
+        @extend %flex;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+
+        dt {
+            margin-right: 20px;
+            color: $c-blue;
+        }
+        
+        dd {
+          color: $c-brown;
+          
+          ul {
+              @extend %flex;
+          }
+
+          li {
+
+              color: $c-brown;
+              
+              &:not(:last-child) {
+                margin-right: 15px;
+              }
+          }  
+          
+          a {
+              text-decoration: none;
+          }
+        }
+    }
+    
+    &__tags {
+        
+        text-transform: uppercase;
+        font-size: rem(14);
+
+        dl, ul {
+            @extend %flex;
+        }
+
+        dt {
+            margin-right: 5px;
+            color: $c-brown;
+        }
+        
+        ul {
+            @extend %flex-wrap;
+        }
+        
+        li {
+            margin-right: 2px;
+            &:after {
+                content: ' / ';
+            }
+        }
+        
+        a {
+            text-decoration: none;
+            color: $c-blue;
+        }
+    }
+    
+    &__watch {
+        @extend %flex;
+        @extend %flex-y;
+        @extend %flex-space-between;
+        height: 80px;
+        border-bottom: 1px solid $c-gray3;
+        margin-top: -20px;
+    
+        p {
+            
+            font-size: rem(21);
+            color: $c-blue;
+            
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                padding-left: 30px;
+            }
+        }
+        
+        ul {
+            @extend %flex;
+            @extend %flex-space-between;
+            flex-direction: row-reverse;
+            width: 80px;        
+    
+            a {
+                font-size: rem(20);
+                color: $c-brown;
+            }
+        }
+    }
+    
+    .o-content {
+        &__main,
+        &__sidebar {
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+
+

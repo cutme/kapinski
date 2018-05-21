@@ -1,0 +1,33 @@
+.c-services {
+    overflow: hidden;
+
+    .o-content {
+        background-image: url(../img/bg/services.jpg);
+        padding: {
+            top: 150px;
+            bottom: 150px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: {
+                top: 70px;
+                bottom: 70px;
+            }
+        }
+        
+        &__main {
+            background-color: white;
+            border-bottom: 1px solid rgba($c-blue, .2);
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding-right: 0;
+            }
+        }
+    }
+    
+    .o-header {
+        @media screen and ( min-width: $tablet_portrait + 1px) {
+            transform: translateY(20%);
+        }
+    }
+}

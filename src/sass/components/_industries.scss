@@ -1,0 +1,108 @@
+.c-industries {
+    margin-bottom: 220px;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        @extend %flex;
+        @extend %flex-wrap;
+        padding: 0 64px;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            padding: 0 40px;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        
+        @media screen and ( max-width: $desktop + px ) {
+            width: 100%;
+        }
+    }
+
+    &__lead {
+        margin-bottom: 50px;
+        
+        @media screen and ( min-width: $smartphone + 1px ) {
+            margin-bottom: 90px;
+            padding-right: 96px;
+        }
+
+        p {
+            font-size: rem(17)
+        }
+    }
+    
+    dl {
+        @extend %flex;
+        @extend %flex-y;
+        margin-bottom: 20px;        
+        
+        dt {
+            @extend %flex;
+            @extend %flex-y;
+            width: 96px;
+            flex-shrink: 0;
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 70px;
+                
+            }
+        }
+        
+        dd {
+            line-height: 1.2;
+            font-size: rem(26);
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                font-size: rem(18);
+            }
+        }
+        
+        i {
+            font-size: rem(30);
+            color: $c-brown;
+        }
+        
+        .icon-agriculture {
+            font-size: rem(36);
+        }
+        
+        .icon-energy {
+            font-size: rem(42);
+        }
+        
+        .icon-finance {
+            font-size: rem(38);
+        }
+        
+        .icon-architecture {
+            font-size: rem(38);
+        }
+        
+        .icon-products {
+            font-size: rem(38);
+        }
+        
+        .icon-production {
+            font-size: rem(32);
+        }
+        
+        .icon-technology {
+            font-size: rem(26);
+        }
+        
+        .icon-transport {
+            font-size: rem(26);
+        }
+    }
+    
+    .o-header {
+        @media screen and ( min-width: $tablet + 1px ) {
+            transform: translateY(-66%);
+        }
+    }
+}

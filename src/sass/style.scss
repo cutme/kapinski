@@ -1,0 +1,64 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/anims';
+@import 'tools/clear';
+@import 'tools/form';
+@import 'tools/functions';
+@import 'tools/mixins';
+@import 'tools/pace';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/btn';
+@import 'objects/container';
+@import 'objects/content';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/section';
+@import 'objects/wrap';
+
+@import 'components/about';
+@import 'components/accordion';
+@import 'components/areas';
+@import 'components/article';
+@import 'components/bigfield';
+@import 'components/blog';
+@import 'components/business';
+@import 'components/clientstype';
+@import 'components/contact';
+@import 'components/contactapla';
+@import 'components/contactform';
+@import 'components/facilities';
+@import 'components/footer';
+@import 'components/hamburger';
+@import 'components/industries';
+@import 'components/logo';
+@import 'components/nav';
+@import 'components/navareas';
+@import 'components/navbar';
+@import 'components/navmobile';
+@import 'components/newposts';
+@import 'components/opinions';
+@import 'components/opinionscarousel';
+@import 'components/pagination';
+@import 'components/posts';
+@import 'components/practices';
+@import 'components/social';
+@import 'components/scroll';
+@import 'components/services';
+@import 'components/team';
+@import 'components/top';
+@import 'components/why';
+@import 'components/worth';
+
+@import 'trumps/trumps';
+

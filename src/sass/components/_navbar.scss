@@ -1,0 +1,135 @@
+.c-navbar {
+    @extend %fix;
+    @include z-index(navbar);
+    transition: transform .9s cubic-bezier(.645,.045,.355,1);
+    right: 0; top: 0;
+    width: 80px; height: 100%;
+    background-color: $c-brown;
+    transform: translateX(80px);
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        width: 100%; height: 50px;
+    }
+    
+    .pace-done & {
+        transform: translateX(0);
+    }
+    
+    &.is-mobile {
+        .c-navbar__item {
+            &--hamburger {
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    transform: translateX(-50%) translateY(0);
+                }
+            }
+            
+            &--top {
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    top: 120px;
+                }
+            }
+        }
+    }
+
+    &__item {
+        @extend %abs;
+        @extend %anim;
+        white-space: nowrap;
+        color: white;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            left: 50%;
+        }
+
+        &--top {
+            top: 50px;
+
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        
+        &--bottom {
+            bottom: 100px;
+            
+            &:before {
+                @extend %abs;
+                @extend %abs-after;
+                @extend %anim;
+                left: -42px; bottom: -30px;
+                transform: rotate(90deg);
+                font: {
+                    weight: 300;
+                    family: 'icomoon';
+                    size: rem(50);
+                }
+                content: "\e901";
+            }
+            
+            &.is-active {
+                bottom: 50px;
+
+                &:before {
+                    left: 90px;
+                    bottom: -30px;
+                    transform: rotate(270deg);
+                }
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                display: none;
+            }
+        }
+        
+        &--hamburger {
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                top: 35px;
+                transform: translateX(-50%) translateY(-80px);
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+            }
+        }
+        
+        &--textlink {
+            font: {
+                family: $lato;
+                size: rem(15);
+                weight: $bold;
+            }
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                transform: translateX(-50%) rotate(270deg) translateZ(0);
+            }
+        }
+    }
+    
+    &__logo {
+        @extend %abs;
+        @extend %abs-xy;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            display: none;
+        }
+    }
+    
+    .icon-arrow-1 {
+        margin-bottom: 14px;
+        font-size: rem(50);
+        
+        &:before {
+           // display: inline-block;
+            //transform: rotate(180deg);
+        }
+    }
+    
+    &.is-mobile {
+        
+    }
+}

@@ -1,0 +1,7 @@
+.o-section {
+    margin-bottom: 150px;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-bottom: 50px;
+    }
+}

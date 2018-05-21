@@ -1,0 +1,163 @@
+.c-navmobile {
+    @extend %fix;
+    @include z-index(navmobile);
+    @extend %flex;
+    @extend %flex-y;
+    @extend %flex-wrap;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 60px;
+    padding-left: 160px;
+    visibility: hidden;
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) {
+        right: 80px;
+        width: calc(50% - 80px);
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        top: 50px;
+        width: 100%;
+        height: calc(100% - 50px);
+        padding-left: get-vw-base(160);
+    }
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: $base + px ) {
+        padding-left: get-vw-base(160);
+    }
+    
+    &__footer {
+        @extend %abs;
+        z-index: 20;
+        left: 160px;
+        bottom: 60px;
+        width: calc(100% - 160px);
+        color: white;
+        
+        @media screen and ( max-width: $base + px ) {
+            left: get-vw-base(160);
+        }
+        
+        > span {
+            margin-right: 40px;
+        }
+    }
+    
+    &__item {
+        @extend %rel;
+        margin-bottom: 10px;
+
+        a {
+            font: {
+                size: rem(36);
+                weight: $bold;
+            }
+            color: white;
+            
+            @media screen and ( max-width: $base + px ) {
+                font-size: get-vw-base(36);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                font-size: get-vw-tablet(36);
+            }
+            
+            @media screen and ( max-width: $smartphone + px) {
+                font-size: rem(18);
+            }
+        }
+    }
+    
+    &__lead {
+        width: 100%;
+        margin-bottom: 20px;
+        opacity: .3;
+        font-size: rem(24);
+        color: white;
+    }
+    
+    &__content {
+        @extend %rel;
+        z-index: 15;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            margin-bottom: 40px;
+        }
+    }
+    
+    .view {
+        transition-duration: 800ms;
+        transition-delay: 600ms;
+        
+        &--2 {
+            transition-delay: 700ms;
+        }
+        
+        &--3 {
+            transition-delay: 800ms;
+        }
+        
+        &--4 {
+            transition-delay: 900ms;
+        }
+        
+        &--5 {
+            transition-delay: 1000ms;
+        }
+    }
+
+    &:after,
+    &:before {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %ease-out;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+    }
+
+    &:after {  
+        background: {
+            image: url(../img/logo-kapinski--sign-white.svg);
+            position: right center;
+            size: 200%;
+        }
+        opacity: 0.04;
+    }
+
+    &:before {
+        transition-duration: 600ms;
+        z-index: -1;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: $c-brown;
+        transform: translate3d(0,-100%,0);
+    }
+
+    &.is-bg {
+        &:before {
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    &.is-content {        
+        .view {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+
+        .view--opacity {
+            opacity: 1;
+        }
+    }
+
+    &.is-visible {
+        visibility: visible;
+    }
+    
+    &.reset-delay {
+        .view {
+            transition-delay: 0ms;
+        }        
+    }
+}

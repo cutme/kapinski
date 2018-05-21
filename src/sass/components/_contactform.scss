@@ -1,0 +1,55 @@
+.c-contactform {
+    @extend %flex;
+    @extend %flex-wrap;
+    @extend %flex-space-between;
+    width: 960px;
+    
+    @media screen and ( max-width: $wrap1 + px ) {
+        width: 100%;
+    }
+    
+    textarea {
+
+        &.form-control {
+            height: 274px;
+        }
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: $c-blue;
+    }
+    
+    &__col {
+        width: 50%; 
+        
+        &:first-of-type {
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                padding-right: 20px;
+            }
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px) {
+            width: 100%;
+        }
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-control {
+        height: 56px;
+        background-color: white;
+    }
+    
+    .o-btn {
+        width: 100%;
+        padding: 0;
+
+        span {
+            width: 100%;
+        }
+    }
+}

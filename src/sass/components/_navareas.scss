@@ -1,0 +1,90 @@
+.c-navareas {
+    
+    .o-header__secondary {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: $c-brown;
+    }
+    
+    ul {
+        @media screen and ( max-width: $tablet + px ) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+    li {
+        @extend %anim;
+        margin-bottom: 10px;
+        border: {
+            bottom: 1px solid rgba($c-blue, .2);
+            right: 1px solid rgba($c-blue, .2);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 50%;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+        }
+
+        a {
+            @extend %flex;
+            @extend %flex-y;
+            @extend %rel;
+            height: 100%;
+            min-height: 66px;
+            padding: 10px 60px;
+            line-height: 1.4;
+            font-size: rem(18);
+            overflow: hidden;
+            
+            @media screen and ( max-width: $wrap1 + px ) {
+                padding: 10px grid(60, 384);
+            }
+            
+            &:after {
+                @extend %anim;
+                @extend %abs;
+                @extend %abs-after;
+                left: 0; top: 0;
+                z-index: -1;
+                width: 100%; height: 100%;
+                background-color: white;
+                transform-origin: bottom;
+                transform: translate3d(0,100%,0);
+            }
+            
+            &:hover {
+                color: $c-brown;
+                
+                &:after {
+                    transform: translate3d(0,0,0);
+                }
+            }
+        }
+        
+        &.current-menu-item {
+            
+
+            box-shadow: rgba($c-blue, .25) 20px 20px 70px;
+
+            a {
+                background-color: white;
+                color: $c-brown;
+                
+                
+            }
+            
+           
+        }
+        
+        &:hover {
+            box-shadow: rgba($c-blue, .25) 20px 20px 70px;
+        }
+    }
+}
+
+
+

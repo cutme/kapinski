@@ -1,0 +1,71 @@
+.c-clientstype {
+    @extend %flex;
+    @extend %flex-wrap;
+    width: 1120px;
+    overflow: hidden;
+    
+    @media screen and ( max-width: $base + px ) {
+        width: 100%;
+    }
+
+    [class^="icon-"] {
+        @extend %flex;
+        @extend %flex-xy;
+        width: 98px; height: 110px;
+        border-bottom: 1px solid $c-brown;
+        margin-right: 24px;
+        text-align: center;
+        color: $c-brown;
+        
+        @media screen and ( max-width: $desktop + px ) {
+            width: 48px;
+        }
+        
+    }
+
+    .icon-tie {
+        font-size: rem(72);
+    }
+
+    .icon-schoe {
+        font-size: rem(26);
+    }
+
+    &__item {
+        width: 50%;
+        padding: 50px 64px;
+        
+        @media screen and ( max-width: $base + px ) {
+            padding: 50px grid(64, 1120);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding: 50px 40px;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 100%;
+            padding: 20px 40px;
+        }
+    }
+    
+    &__lead {
+        @extend %flex;
+        @extend %flex-y;
+        margin-bottom: 40px;
+        
+        .o-header__secondary {
+            line-height: 1.2;
+            text-transform: uppercase;
+            color: $c-blue;
+        }
+    }
+    
+    article {
+        font-size: rem(17);
+        
+        @media screen and ( max-width: $tablet + px ) {
+            font-size: rem(15);
+        }
+    }
+}

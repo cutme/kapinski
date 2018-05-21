@@ -1,0 +1,118 @@
+.c-areas {
+    
+    article {
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+    
+    &__content {
+        @extend %flex;
+        @extend %flex-wrap;
+        width: calc(100% + 40px);
+        margin-left: -40px;
+        padding-right: 80px;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            margin-left: -20px;
+            width: calc(100% + 20px);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 100%;
+            padding: 0 20px;
+            margin-left: 0;
+        }
+        
+    }
+    
+    &__item {
+        width: 25%;
+        margin-bottom: 40px;
+        padding-left: 40px;
+
+        > div {
+            @extend %rel;
+            padding: 40px;
+            overflow: hidden;
+            border: {
+                right: 1px solid rgba($c-brown3, .16);
+                bottom: 1px solid rgba($c-brown3, .16);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                padding: 20px 20px 30px 20px;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                padding: 0 20px 30px 0;
+            }
+            
+            &:after {
+                @extend %abs;
+                @extend %abs-after;
+                @extend %anim;
+                left: 0; top: 0;
+                z-index: -1;
+                width: 100%; height: 100%;
+                background-color: white;
+                transform-origin: bottom;
+                transform: translate3d(0,100%,0);
+            }
+        }
+        
+        &:hover {
+            > div {
+                &:after {
+                    transform: translate3d(0,0,0);
+                }
+            }
+        }
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            width: 33%;
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            width: 50%;
+            padding-left: 20px;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+        }
+    }
+    
+    &__more {
+        font: {
+            family: $open;
+            size: rem(18);
+        }
+        color: $c-brown3;
+    }
+    
+    &__try {
+        margin-bottom: 100px;
+        padding: 60px 80px 0 0;
+        text-align: center;
+    }
+
+    .o-header__secondary {
+        margin-bottom: 1em;
+        line-height: 1.3;
+        color: $c-blue2;
+    }
+    
+    .o-wrap {
+        &--indent {
+            @media screen and ( max-width: $desktop + px ) {
+                padding-left: 160px;
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding: {
+                    left: 40px;
+                }
+            }
+        }
+    }
+}

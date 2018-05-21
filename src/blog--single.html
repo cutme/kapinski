@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<%= require('html-loader!./includes/head.html') %>
+
+<body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+    <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: white;" id="cover"></div>
+
+    <%= require('html-loader!./includes/logo__navbar.html') %>
+
+	<div itemprop="mainContentOfPage" role="main" class="o-container">	    
+
+        <div class="c-top c-top--blog">
+            <div class="c-top__content">
+            
+                <nav class="c-nav c-nav--top">
+                    <%= require('html-loader!./includes/nav.html') %>
+                </nav>
+                
+                <div class="c-top__header">
+                    <h1>Blog o prawie<br><span class="highlight">w biznesie</span></h1>
+                    
+                    <span class="c-top__intro">
+                        Przeglądaj nasze spostrzeżenia, obserwacje i doświadczenia
+związane z wykorzystywaniem prawa w biznesie.
+                    </span>                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-blog o-section js-nextSection" id="areas">
+            <div class="o-wrap o-wrap--indent">
+            
+                <%= require('html-loader!./includes/blog-categories.html') %>
+                
+                <div class="o-content o-content--article">
+                    
+                    <%= require('html-loader!./includes/blog-sidebar.html') %>
+
+ 
+                    <div class="o-content__main">
+                                                                        
+                        <div class="c-blog__post anim anim--up">
+                        
+                            <div class="c-blog__excerpt c-blog__excerpt--big">
+                                <p>
+Duis iaculis sollicitudin ipsum, in suscipit nisl uspendisse eget
+vulputate mi. Phasellus ultrices sem justo, eu vestibulum
+dolor ornare ut. Cras ut diam aliquet vitae, blandit nunc.
+                                </p>
+                            </div>
+                            
+                            <div class="c-blog__date">
+                                <p>28 lutego 2016 / <a href="#" class="u-link u-link--brown">10 komentarzy</a></p>
+                                <p>kategoria: / <a href="#" class="u-link u-link--brown">zamówienia publiczne</a></p>
+                                <a href="#" class="icon-printer"></a>
+                            </div>
+                            
+                            <div class="c-blog__share">
+                                <dt>Poleć:</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="icon-facebook"></a></li>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="icon-google"></a></li>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="icon-twitter"></a></li>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="icon-linkedin"></a></li>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            
+                            <article class="c-article">
+                                
+                            
+                                <p>
+    Zabezpieczenia prawne Inwestorów, dochodzenie roszczeń wykonawców o zapłatę wynagrodzenia, negocjowanie i przygotowywanie kontraktów, w tym opartych na FIDIC. Proin mauris nulla, semper condimentum aliquet vel, euismod at ex. Duis nec ex laoreet, rhoncus lorem id, mollis tortor. Fusce ipsum lectus, volutpat vel vestibulum ac, vehicula a felis. Curabitur porta lectus massa, et sodales diam convallis eget. Praesent sed euismod lacus, ullamcorper mattis eros. <a href="#">Aenean tristique efficitur</a> ullamcorper. Maecenas sagittis odio eget tellus malesuada, sed luctus sapien venenatis. Praesent vitae nunc sapien. Phasellus est nunc, lacinia non dui vestibulum, rutrum cursus diam. In hac habitasse platea dictumst. Cras dictum quam nisi, sed tristique diam iaculis molestie.
+                                </p>
+                                
+                                <p>
+                                    <img src=<%= require("./img/post.jpg") %> alt="post" width="800">  
+                                </p>
+                                
+                                                                <p>
+    Zabezpieczenia prawne Inwestorów, dochodzenie roszczeń wykonawców o zapłatę wynagrodzenia, negocjowanie i przygotowywanie kontraktów, w tym opartych na FIDIC. Proin mauris nulla, semper condimentum aliquet vel, euismod at ex. Duis nec ex laoreet, rhoncus lorem id, mollis tortor. Fusce ipsum lectus, volutpat vel vestibulum ac, vehicula a felis. Curabitur porta lectus massa, et sodales diam convallis eget. Praesent sed euismod lacus, ullamcorper mattis eros. <a href="#">Aenean tristique efficitur</a> ullamcorper. Maecenas sagittis odio eget tellus malesuada, sed luctus sapien venenatis. Praesent vitae nunc sapien. Phasellus est nunc, lacinia non dui vestibulum, rutrum cursus diam. In hac habitasse platea dictumst. Cras dictum quam nisi, sed tristique diam iaculis molestie.
+                                </p>
+                                
+                                <blockquote>
+                                    <p>
+    “Phasellus laoreet
+    nec scelerisque
+    velit aecenas quis
+    arcu quam ornare
+    quis molestie.“
+                                    </p>
+                                </blockquote>
+                                
+                                <p>
+    Zabezpieczenia prawne Inwestorów, dochodzenie roszczeń wykonawców o zapłatę wynagrodzenia, negocjowanie i przygotowywanie kontraktów, w tym opartych na FIDIC. Proin mauris nulla, semper condimentum aliquet vel, euismod at ex. Duis nec ex laoreet, rhoncus lorem id, mollis tortor. Fusce ipsum lectus, volutpat vel vestibulum ac, vehicula a felis. Curabitur porta lectus massa, et sodales diam convallis eget. Praesent sed euismod lacus, ullamcorper mattis eros. Aenean tristique efficitur ullamcorper. Maecenas sagittis odio eget tellus malesuada, sed luctus sapien venenatis. Praesent vitae nunc sapien. Phasellus est nunc, lacinia non dui vestibulum, rutrum cursus diam. In hac habitasse platea dictumst. Cras dictum quam nisi, sed tristique diam iaculis molestie. Nullam viverra, nibh sit amet convallis maximus, quam lorem faucibus ante, a imperdiet eros massa nec quam. Vivamus augue nunc, pharetra sit amet eros quis, sodales rhoncus felis. 
+                                </p>
+                                
+                                <p>
+    Nullam cursus pulvinar placerat. Nulla nulla lectus, gravida vitae laoreet a, condimentum at urna. Donec et lacus quis nulla lacinia aliquam. <a href="#">Pellentesque ex felis</a>, ultrices eget risus eu, finibus faucibus ligula. Nullam viverra, nibh sit amet convallis maximus, quam lorem faucibus ante, a imperdiet eros massa nec quam. Vivamus augue nunc, pharetra sit amet eros quis, sodales rhoncus felis. Nulla facilisi. Praesent placerat leo sapien, a luctus tellus semper eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam viverra, nibh sit amet convallis maximus, quam lorem faucibus ante, a imperdiet eros massa nec quam. Vivamus augue nunc, pharetra sit amet eros quis, sodales rhoncus felis. Nulla facilisi. Praesent placerat leo sapien, a luctus tellus semper eu. Nullam cursus pulvinar placerat. Nulla nulla lectus, gravida vitae laoreet a, condimentum at urna. Donec et lacus quis nulla lacinia aliquam. Pellentesque ex felis, ultrices eget risus eu, finibus faucibus ligula.
+                                </p>
+                            
+                            </article>
+                            
+                            
+                            <div class="c-blog__author">
+                                <dl>
+                                    <dt>
+                                        <img src=<%= require("./img/avatar.jpg") %> alt="avatar" width="34" height="34">
+                                    </dt>
+                                    
+                                    <dd>
+                                        <p>Marcin Kapiński</p>
+
+                                        <ul>
+                                            <li>
+                                                <a href="#">Więcej o autorze</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Skontaktuj się z autorem</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Inne wpisy autora</a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            
+                            
+                            <div class="c-blog__tags">
+                                <dl>
+                                    <dt>Tagi:</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Marcin</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Kapiński</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Marcin</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Kapiński</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Marcin</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Kapiński</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Marcin</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#">Kapiński</a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            
+                            
+                            
+                            
+                        </div><!-- /post -->
+                        
+                        
+                                              
+                                                
+                        <div class="c-blog__help">
+                            <p>POTRZEBUJESZ POMOCY W ZAKRESIE TEMATYKI, O KTÓREJ PISZEMY?</p>
+                            
+                            <a href="#" class="o-btn js-contact"><span>Umów się na spotkanie</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <%= require('html-loader!./includes/footer.html') %>
+
+	</div>
+	
+	
+	<%= require('html-loader!./includes/contactapla.html') %>
+	<%= require('html-loader!./includes/navmobile.html') %>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+.c-facilities {
+    margin-bottom: 220px;
+    
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-bottom: 50px;
+        padding: 0 40px;
+    }
+    
+    &__content {
+        width: 1120px;
+        
+        @media screen and ( max-width: $wrap1 + px ) {
+            width: 100%;
+        }
+    }
+    
+    &__columns {
+        @extend %flex;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+        }
+        
+         > div {
+            width: 50%;
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            
+            &:first-of-type {
+                margin-right: 160px;
+                
+                @media screen and ( max-width: $wrap1 + px ) {
+                    margin-right: grid(160, 1120);
+                }
+                
+                @media screen and ( max-width: $smartphone + px ) {
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        p {
+            margin-bottom: 1.5em;
+            font-size: rem(17);
+        }
+    }
+    
+    &__intro {
+        margin-bottom: 90px;
+        text-transform: uppercase;
+        font-size: rem(20);
+        line-height: 1.5;
+        color: $c-brown;
+    }
+    
+    &__lead {
+        margin-bottom: 1em;
+        font-size: rem(26);
+        line-height: 1.2;
+        color: $c-brown;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            font-size: rem(20);
+        }
+    }
+
+    .o-content {
+        padding-left: 320px;
+        
+        @media screen and ( max-width: $wrap1 + px ) {
+            padding-left: grid(320, $wrap1);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: 0;
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 70px;
+    }
+}

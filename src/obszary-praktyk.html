@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<%= require('html-loader!./includes/head.html') %>
+
+<body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+    <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: white;" id="cover"></div>
+
+    <%= require('html-loader!./includes/logo__navbar.html') %>
+
+	<div itemprop="mainContentOfPage" role="main" class="o-container">	    
+
+        <div class="c-top c-top--areas">
+            <div class="c-top__content js-fullHeight">
+            
+                <nav class="c-nav c-nav--top">
+                    <%= require('html-loader!./includes/nav.html') %>
+                </nav>
+                
+                <div class="c-top__header">
+                    <h1>Nasze Obszary praktyk</h1>
+                    
+                    <span class="c-top__intro">
+                        Zajmujemy się pełną obsługą prawną,
+                        rozwiązywaniem problemów, z którymi
+                        może spotkać mały i duży biznes.
+                    </span>                    
+                </div>
+                
+                <div class="c-top__more">
+                    <a href="#areas" class="o-btn no-wrap js-goto"><span>więcej</span></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="c-areas js-nextSection" id="areas">
+            <div class="o-wrap">
+                <div class="c-areas__content">
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                    <%= require('html-loader!./includes/areas__item.html') %>
+                </div>
+                
+                <div class="c-areas__try">
+                    <a href="#" class="o-btn">Wypróbuj nas</a>
+                </div>
+            </div>
+        </div>
+        
+                
+        <div class="o-section c-opinions c-opinions--bg">
+            <%= require('html-loader!./includes/opinions.html') %>
+        </div>
+        
+        
+        <%= require('html-loader!./includes/contact.html') %>
+        <%= require('html-loader!./includes/footer.html') %>
+
+	</div>
+	
+	
+	<%= require('html-loader!./includes/contactapla.html') %>
+	<%= require('html-loader!./includes/navmobile.html') %>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.o-wrap {
+    padding-left: 160px;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        padding-left: 0;
+    }
+
+    &--indent {
+        padding-left: 320px;
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            padding-left: 240px;
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            padding-left: 160px;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding-left: 0;
+        }
+    }
+}

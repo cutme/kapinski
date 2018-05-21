@@ -1,0 +1,47 @@
+// Fonts
+
+$lato:      'Lato', sans-serif;
+$open:      'Open Sans', sans-serif;
+
+$icons:		'icomoon';
+
+
+// Default
+
+$text:		$lato;
+
+
+
+// Font weights
+
+$light:             300;
+$regular:			400;
+$bold:              700;
+$semibold:          600;
+
+
+$z-index: (
+	logo:           100,
+	navbar:         100,
+	navmobile:      100,
+	contactapla:    110,
+);
+
+
+
+// Default
+
+$base-font-size:	16;
+$base:				1920;
+$wrap1:             1760;
+$wrap2:             1800;
+$wrap3:             1440;
+
+
+// RWD
+
+$desktop:				1280;
+$tablet:				1024;
+$tablet_portrait:		880;
+$smartphone:			640;
+$smartphone_portrait:	480;

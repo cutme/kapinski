@@ -1,0 +1,304 @@
+.c-contactapla {
+    @include z-index(contactapla);
+    @extend %flex;
+    @extend %rel;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    visibility: hidden;  
+    -webkit-overflow-scrolling: touch;
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+    
+    &__address {
+        margin-bottom: 40px;
+        font-weight: $bold;
+        color: white;
+    }
+    
+    &__close {
+        @extend %abs;
+        @extend %anim;
+        right: 0;
+        top: 60px;
+        font: {
+            family: $lato;
+            size: rem(15);
+            weight: $bold;
+        }
+        transform: translateX(-50%) rotate(270deg) translateZ(0);
+        white-space: nowrap;
+        color: white;
+        cursor: pointer;
+        
+        .icon-close {
+            @extend %abs;
+            right: 0; top: -45px;
+            font-size: rem(32);
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            transform: translateX(0) rotate(270deg) translateZ(0);
+            font-weight: 400;
+            color: $c-blue;
+            
+            .icon-close {
+                color: $c-blue;
+            }
+        }
+    }
+
+    &__directions {
+        margin-bottom: 80px;
+        font-weight: $bold;
+        color: white;
+    }
+
+    &__email {
+        font-size: rem(38);
+        color: $c-brown;
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            font-size: get-vw-wrap3(38);
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            font-size: rem(18);
+        }
+    }
+
+    &__col {
+        @extend %flex;
+        @extend %flex-y;
+        @extend %flex-wrap;
+        @extend %rel;
+        width: 50%;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 100%;
+        }
+        
+        @media screen and ( max-width: $smartphone + 1px ) {
+           // min-height: 50%;
+            padding: 40px get-vw-smartphone(40);
+        }
+
+        &:before,
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &:after {
+            @extend %ease-out;
+            transition-duration: 600ms;
+            transition-delay: 500ms;
+            z-index: 1;
+            background-size: 200%;
+            background-repeat: no-repeat;
+            opacity: 0;
+        }
+
+        &:before {
+            z-index: -2;
+            transition: transform 600ms cubic-bezier(.785,.135,.15,.86);
+            transform-origin: center top;
+            transform: scale3d(1,0,1);
+        }
+        
+        &--left {
+            @media screen and ( min-width: $smartphone + 1px ) {
+                justify-content: flex-end;
+            }
+            
+            @media screen and ( max-width: $smartphone + 1px ) {
+                padding-top: 100px;
+            }
+
+            &:before {
+                background-color: white;
+                transition-delay: .4s; 
+            }
+            
+            &:after {
+                background-image: url(../img/logo-kapinski--sign.svg);
+                background-position: left center;
+                opacity: .02;
+            }
+            
+            .c-contactapla__lead {
+                color: $c-blue;
+            }
+        }
+        
+        &--right {
+        
+            &:before {
+                background-color: $c-brown;
+                transition-delay: .6s; 
+            }
+            
+            &:after {
+                background-image: url(../img/logo-kapinski--sign-white.svg);
+                background-position: right center;
+                opacity: .04;
+            }
+            
+            .c-contactapla__row {
+                @media screen and ( min-width: $wrap3 + 1px ) {
+                    padding-left: 160px;
+                }
+                
+                @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $wrap3 + px ) {
+                    padding-left: get-vw-wrap3(160);
+                }
+                
+                
+            }
+            
+            .c-contactapla__lead {
+                margin-bottom: 20px;
+                color: white;
+            }
+        }
+    }
+    
+    &__logo {
+        @extend %abs;
+        left: 70px; top: 40px;
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            width: get-vw-wrap3(640);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            left: get-vw-tablet(70);
+        }
+        
+        @media screen and ( max-width: $smartphone + 1px ) {
+            left: get-vw-smartphone(40);
+        }
+    }
+    
+    &__row {
+        width: 640px; 
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            width: get-vw-wrap3(640);
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    &__rows {
+        @extend %rel;
+
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 100%;
+           // min-height: 336px;
+        }
+    }
+    
+    &__lead {
+        font-size: rem(24);
+        opacity: .3;
+    }
+    
+    &__tel {
+        font: {
+            size: rem(58);
+            weight: $bold;
+        }
+        color: $c-brown;
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            font-size: get-vw-wrap3(58);
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            font-size: rem(24);
+        }
+    }
+    
+    .icon-facebook,
+    .icon-linkedin {
+        color: white;
+    }
+
+    .view,
+    .view--opacity {        
+        
+    }
+    
+    .view--opacity {
+        @extend %ease-out;
+        transition-duration: 600ms;
+        transition-delay: 1600ms;
+        opacity: 0;
+    }
+    
+   /*
+ .view {
+        @extend %ease-out;        
+        transform: translate3d(0, 100px, 0);
+    }
+*/
+
+    &.is-bg {
+        .c-contactapla {
+            &__col {
+                &:after,
+                &:before {
+                    transform: scale3d(1,1,1);
+                }
+            }
+        }
+    }
+    
+    &.is-content {        
+        .view {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        
+        .view--opacity {
+            opacity: 1;
+        }
+    }
+    
+    &.is-visible {
+        visibility: visible;
+    }
+    
+    &.reset-delay {
+        .view,
+        .view--opacity {
+            transition-delay: 0ms;
+        }
+        
+        .c-contactapla__col {
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+/*
+
+.c-contactapla.reset-delay .view, 
+.c-contactapla.reset-delay .view--opacity {
+    transition-delay: 0 !important;
+}
+*/
