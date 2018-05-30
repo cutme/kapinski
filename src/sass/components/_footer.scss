@@ -62,7 +62,8 @@
         @extend %flex;
         @extend %flex-space-between;
         @extend %flex-wrap;
-        width: 960px;
+        //width: 960px;
+        width: 100%;
         
         @media screen and ( max-width: $wrap1 + px ) {
             width: 100%;
@@ -87,13 +88,17 @@
         @extend %flex;
         @extend %flex-y;
         
-        
         @media screen and ( min-width: $tablet_portrait + 1px) {
             transform: translateX(-60px);
         }
 
         img {
             margin-right: 15px;
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 60px;
+            }
+            
         }
 
         span {

@@ -1,26 +1,27 @@
 .o-container {
-    //@extend %anim;
-    transition: transform .9s cubic-bezier(.645,.045,.355,1);
+    @extend %anim-slow;
+    @extend %rel;
+//    transition: transform .9s cubic-bezier(.645,.045,.355,1);
 	height: 100%;
-	transform: translateX(100%);
+	//transform: translateX(100%);
 	//transform: translateX(100%);
     //opacity: 0;
     
     &:after,
     &:before {
-        transition: transform .9s cubic-bezier(.645,.045,.355,1);
+        @extend %anim-slow;
         transform-origin: right;
          
          .pace-done & {
-            transform: scale3d(0,1,1);
+            transform: scale3d(0, 1, 1);
         }
     }
-    
+
     &:after,
     &:before {
         @extend %abs;
         @extend %abs-after;
-        left: -100%; top: 0;
+        left: 0; top: 0;
         width: 100%;
         height: 100%;
     }
@@ -34,12 +35,13 @@
     &:before {
         z-index: 10;
         transition-delay: .8s;
-        background-color: $c-brown;
+        background: $c-gray1;
     }
 
 	.pace-done & {
-		transition-delay: 2s;
-		transform: translateX(0);
+	    //opacity: 1;
+		//transition-delay: 2s;
+		//transform: translateX(0);
 	}
 	
 }

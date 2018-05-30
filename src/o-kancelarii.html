@@ -4,6 +4,8 @@
 
 <body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 
+    <div class="mk" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 2002; background-image: url(img/MK-Logo-color.gif); background-repeat: no-repeat; background-position: center; background-size: 62px 62px" id="mk"></div>
+
     <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: white;" id="cover"></div>
 
     <%= require('html-loader!./includes/logo__navbar.html') %>
@@ -18,7 +20,7 @@
                 </nav>
                 
                 <div class="c-top__header">
-                    <h1>
+                    <h1 class="anim anim--upslow">
                         Kancelaria prawna<br>
                         <span class="highlight">dla małego i dużego</span><br>
                         biznesu
@@ -30,11 +32,9 @@ na rynku, nasza Kancelaria powstała po to, aby zaspokajać prawne potrzeby
 nowoczesnych przedsiębiorstw i zabezpieczać prawnie ich tworzenie
                             </span>
                     </h1>
-                    
-
                 </div>
                 
-                <div class="c-top__more">
+                <div class="c-top__more anim anim--upslow">
                     <a href="#why" class="o-btn no-wrap js-goto"><span>więcej</span></a>
                 </div>
             </div>
@@ -181,7 +181,7 @@ nowoczesnych przedsiębiorstw i zabezpieczać prawnie ich tworzenie
 
 -->
 
-        <div class="o-section c-business">
+        <div class="c-business">
             <div class="o-wrap o-wrap--indent">
         
                 <div class="o-content">
@@ -247,6 +247,7 @@ nowoczesnych przedsiębiorstw i zabezpieczać prawnie ich tworzenie
                                     Ochrona majątku firmy 
                                     </li>
     
+<!--
                                     <li>
     Windykacja należności 
                                     </li>
@@ -282,7 +283,12 @@ nowoczesnych przedsiębiorstw i zabezpieczać prawnie ich tworzenie
                                     <li>
     Spory sądowe i arbitraż
                                     </li>
+-->
                                 </ul>
+                                
+                                <p>
+                                    <a href="#" class="o-btn no-wrap js-goto"><span>Zobacz więcej</span></a>
+                                </p>
                             </article>
                         </div>
                     </div>
@@ -311,7 +317,9 @@ nowoczesnych przedsiębiorstw i zabezpieczać prawnie ich tworzenie
                         <div class="c-industries__content">
                             <div class="c-industries__col">
                                 <div class="c-industries__lead">
+                                    <p>
 Nasza Kancelaria posiada doświadczenie w reprezentowaniu klientów we wszystkich rodzajach spraw związanych z biznesem. Jesteśmy w stanie zapewnić kompleksowe doradztwo prawne firmom praktycznie z każdej branży, w tym:
+                                    </p>
                                 </div>
                                 
                                 <dl>
@@ -354,14 +362,14 @@ Nasza Kancelaria posiada doświadczenie w reprezentowaniu klientów we wszystkic
                                 
                                 <dl>
                                     <dt>
-                                        <i class="icon-architecture"></i>
+                                        <i class="icon-buildings"></i>
                                     </dt>
                                     <dd>Budownictwo i Nieruchomości</dd>
                                 </dl>
                                 
                                 <dl>
                                     <dt>
-                                        <i class="icon-chemicals"></i>
+                                        <i class="icon-chemistry"></i>
                                     </dt>
                                     <dd>Chemikalia</dd>
                                 </dl>

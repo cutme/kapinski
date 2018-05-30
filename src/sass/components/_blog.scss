@@ -99,7 +99,7 @@
         }
         
         li {
-            margin: 0 20px 5px 0;
+            margin: 0 20px 15px 0;
             
             &.current {
                 a {
@@ -195,6 +195,13 @@
             margin-bottom: 2.5em;
             font-size: rem(18);
             color: $c-gray2;
+            
+           /*
+ @media screen and ( min-width: $base + 1px ) {
+                font-size: get-vw-base(18);
+            }
+*/
+            
         }
         
         &--big {

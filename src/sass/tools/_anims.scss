@@ -1,11 +1,5 @@
 .anim {
-    //@extend %anim;
-    
-    transition: transform, opacity 1.4s;
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-	
-	will-change: transform, opacity;
-	transition-duration: 500ms;
+    @extend %anim-slow;
 	
 	&--bottom {
 		opacity: 0;
@@ -28,16 +22,14 @@
 	
 	&--left {
 		opacity: 0;
-		transform: translate3d(-100%, 0, 0);
-		
-		
+		transform: translate3d(-20px, 0, 0);
+
 		&.anim--loaded {
 			opacity: 1;
 			transform: translate3d(0, 0, 0);
-			//transform: translateX(0);
 		}
 	}
-	
+
 	&--right {
 		opacity: 0;
 		transform: translateX(50px);
@@ -120,6 +112,17 @@
 		}
 	}
 	
+	&--upslow {
+    	transform: translate3d(0, 20px, 0);
+        opacity: 0;
+        
+        
+        &.anim--loaded {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+	}
+	
 	&--upBefore {
 	    &:before { 
 	        
@@ -143,7 +146,7 @@
 .link {
 	@extend %rel;
 	display: inline-block;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .link--kukuri {
@@ -161,45 +164,48 @@
 	&:after {
 	    @extend %abs;
 	}
-}
-
-.link--kukuri::after {
-	content: '';
-	height: 2px;
-	width: 100%;
-	top: 100%;
-	margin-top: -2px;
-	right: 0;
-	background: $c-brown;
-
-	transform: translate3d(-100%,0,0);
-	transition: transform 0.4s;
-    transition-delay: 2s;
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	
-	.anim--loaded & {
-	    transform: translate3d(0,0,0);
+	&:after {
+    	content: '';
+    	height: 3px;
+    	width: 100%;
+    	top: 100%;
+    	margin-top: -3px;
+    	right: 0;
+    	background: $c-brown;
+    
+    	transform: translate3d(-100%,0,0);
+    	transition: transform 0.4s;
+        transition-delay: 2s;
+    	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    	
+    	.anim--loaded & {
+    	    transform: translate3d(0,0,0);
+    	}
 	}
+	
+	&:before {
+    	content: attr(data-letters);
+    	z-index: 2;
+    	overflow: hidden;
+    	color: $c-brown;
+    	white-space: nowrap;
+        width: 0%;
+    	transition: width 0.4s 0.3s;
+    	
+    	.anim--loaded & {
+    	    transition-delay: 1s;
+    	    width: 100%;
+    	}
+    }
 }
 
 
-.link--kukuri::before {
-	content: attr(data-letters);
-	z-index: 2;
-	overflow: hidden;
-	color: $c-brown;
-	white-space: nowrap;
-    width: 0%;
-	transition: width 0.4s 0.3s;
-}
 
 .link--kukuri::before {
 	//width: 100%;
 	
-	.anim--loaded & {
-	    transition-delay: 1s;
-	    width: 100%;
-	}
+	
 }
 
 

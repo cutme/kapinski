@@ -4,14 +4,20 @@
     
     @media screen and ( max-width: $tablet_portrait + px ) {
         margin-bottom: 50px;
-        padding: 0 40px;
+        padding-left: 40px;
     }
     
     &__content {
-        width: 1120px;
+        max-width: 1120px;
         
         @media screen and ( max-width: $wrap1 + px ) {
             width: 100%;
+            max-width: 100%;
+            
+        }
+        
+        @media screen and ( min-width: $tablet + px ) and ( max-width: $wrap1 + px ) {
+            padding-right: 80px;
         }
     }
     
@@ -55,6 +61,10 @@
         font-size: rem(20);
         line-height: 1.5;
         color: $c-brown;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            font-size: rem(16);
+        }
     }
     
     &__lead {

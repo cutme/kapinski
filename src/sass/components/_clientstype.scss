@@ -1,12 +1,9 @@
 .c-clientstype {
     @extend %flex;
     @extend %flex-wrap;
-    width: 1120px;
+    //width: 1120px;
+    width: 100%;
     overflow: hidden;
-    
-    @media screen and ( max-width: $base + px ) {
-        width: 100%;
-    }
 
     [class^="icon-"] {
         @extend %flex;

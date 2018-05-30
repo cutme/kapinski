@@ -18,8 +18,14 @@
     
     &--top {
         @extend %abs;
-        top: 46px; left: grid(950, $base - 160);
-        width: grid(630, $base - 160);
+        top: 46px; right: 160px;
+        width: 640px;
+        //left: grid(950, $base - 160);
+        //width: grid(630, $base - 160);
+        
+        @media screen and ( max-width: $base + px) {
+            width: grid(640, $base - 160);
+        }
         
         @media screen and ( max-width: $tablet_portrait + px) {
             display: none;

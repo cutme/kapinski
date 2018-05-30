@@ -4,6 +4,8 @@
 
 <body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 
+    <div class="mk" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 2002; background-image: url(img/MK-Logo-color.gif); background-repeat: no-repeat; background-position: center; background-size: 62px 62px" id="mk"></div>
+
     <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: white;" id="cover"></div>
 
     <%= require('html-loader!./includes/logo__navbar.html') %>
@@ -18,19 +20,19 @@
                 </nav>
                 
                 <div class="c-top__header">
-                    <h1>
+                    <h1 class="anim anim--upslow">
                         Kancelaria prawna<br>
                         <span class="highlight">dla biznesu</span>, którą chcesz<br>
                         mieć po swojej stronie
                         
-                        <span class="c-top__intro">
+                        <span class="c-top__intro anim anim--upslow">
                             Zajmujemy się pełną obsługą prawną,
                             rozwiązywaniem problemów, z którymi
                             może spotkać mały i duży biznes.
                         </span>
                     </h1>                    
                     
-                    <a href="#" class="o-btn no-wrap js-contact"><span>Wypróbuj nas</span></a>
+                    <a href="#" class="o-btn no-wrap anim anim--upslow js-contact"><span>Wypróbuj nas</span></a>
                 </div>
                 
             </div>
@@ -59,7 +61,7 @@
     Zajmujemy się pełną gamą sporów, z którymi może spotkać się przedsiębiorca, senior executive lub mały, średni lub duży biznes, a także podmioty indywiduane.
                                 </p>
                             </article>
-                            <a href="obszary-praktyk.html" class="o-btn no-wrap anim anim--up"><span>Poznaj nasze<br> obszary praktyk</span></a>
+                            <a href="obszary-praktyk.html" class="o-btn no-wrap anim anim--upslow"><span>Poznaj nasze<br> obszary praktyk</span></a>
                         </div>
                     </aside>
 
@@ -240,7 +242,7 @@ Obsługujemy podmioty Nasza firma dokłada wszelkich starań,  aby proces prawny
         </div>
 
 
-        <div class="c-newposts">
+        <div class="o-section c-newposts">
             <div class="o-wrap o-wrap--indent">
         
                 <div class="o-content">

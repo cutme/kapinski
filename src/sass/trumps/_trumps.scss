@@ -124,3 +124,27 @@
         transition-delay: 1000ms;
     }
 }
+
+    .pace-done .mk {
+        @extend %anim;
+        z-index: 0 !important;
+        opacity: 0;
+    }
+
+/*
+
+
+.pace {
+    &:after {
+        @extend %abs;
+        @extend %abs-xy;
+        @extend %abs-after;
+        left: 0; top: 0;
+        z-index: 9999;
+        width: 62px; height: 62px;
+        background-image: url(../img/MK-Logo-white.gif);
+        background-repeat: no-repeat;
+        
+    }
+}
+*/

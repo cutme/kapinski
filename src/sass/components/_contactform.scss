@@ -2,7 +2,16 @@
     @extend %flex;
     @extend %flex-wrap;
     @extend %flex-space-between;
-    width: 960px;
+    width: 100%;
+    //width: 960px;
+    
+    @media screen and ( min-width: $tablet + 1px ) and ( max-width: $base + px ) {
+        padding-right: grid(180, 1280);
+    }
+    
+    @media screen and ( min-width: $base + 1px ) {
+        padding-right: 180px;
+    }
     
     @media screen and ( max-width: $wrap1 + px ) {
         width: 100%;
@@ -26,7 +35,7 @@
         
         &:first-of-type {
             @media screen and ( min-width: $tablet_portrait + 1px ) {
-                padding-right: 20px;
+                padding-right: 3%;
             }
         }
         

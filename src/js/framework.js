@@ -342,7 +342,7 @@ const hideMenu = function() {
 
 // Show on scroll
 
-(function() {
+const showonscroll = function() {
 
     const el = document.getElementsByClassName('anim');
     
@@ -379,7 +379,17 @@ const hideMenu = function() {
 
 	window.addEventListener('scroll', init);
 	
-}).call(this);
+};
+
+Pace.on('done', function() {   
+    
+    setTimeout(function() {
+        
+        showonscroll();
+        
+    }, 2000);
+});
+
 
 
 

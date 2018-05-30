@@ -1,5 +1,5 @@
 .c-industries {
-    margin-bottom: 220px;
+   // margin-bottom: 220px;
     
     @media screen and ( max-width: $tablet_portrait + px ) {
         margin-bottom: 50px;
@@ -18,7 +18,7 @@
     &__col {
         width: 50%;
         
-        @media screen and ( max-width: $desktop + px ) {
+        @media screen and ( max-width: $wrap3 + px ) {
             width: 100%;
         }
     }
@@ -39,7 +39,7 @@
     dl {
         @extend %flex;
         @extend %flex-y;
-        margin-bottom: 20px;        
+        margin-bottom: 40px;        
         
         dt {
             @extend %flex;
@@ -72,23 +72,29 @@
         }
         
         .icon-energy {
-            font-size: rem(42);
+            font-size: rem(40);
         }
         
         .icon-finance {
             font-size: rem(38);
         }
         
-        .icon-architecture {
-            font-size: rem(38);
+        .icon-buildings {
+            font-size: rem(40);
+        }
+        
+        
+        .icon-chemistry {
+            font-size: rem(40);
         }
+        
         
         .icon-products {
             font-size: rem(38);
         }
         
         .icon-production {
-            font-size: rem(32);
+            font-size: rem(34);
         }
         
         .icon-technology {
@@ -96,10 +102,12 @@
         }
         
         .icon-transport {
-            font-size: rem(26);
+            font-size: rem(24);
         }
     }
     
+    
+
     .o-header {
         @media screen and ( min-width: $tablet + 1px ) {
             transform: translateY(-66%);

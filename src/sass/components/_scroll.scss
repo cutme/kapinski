@@ -50,11 +50,11 @@
             @extend %anim;
             display: block;
             font-size: rem(90);
+            color: $c-brown;
             cursor: pointer;
 
             &:not(.is-inactive) {
                 &:hover {
-                    color: $c-brown;
                     
                      &.icon-arrow-2--down {
                         transform: translateY(5px);
@@ -68,19 +68,18 @@
             
             &.is-inactive {
                 opacity: .2;
-            }
-            
-           
+            }           
         }
     }
     
     &--practices {
-        width: 960px;
+       // width: 960px;
         padding: 0 160px;
         
         @media screen and ( max-width: $base + px ) {
             width: 100%;
-            padding: 0 get-vw-base(160);
+            padding: 0 grid(160, 960);
+            //padding: 0 get-vw-base(160);
         }
         
         @media screen and ( max-width: $tablet_portrait + px ) {

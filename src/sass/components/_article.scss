@@ -18,7 +18,7 @@
             margin-bottom: 1.5em;
             padding-left: 30px;
             
-            @media screen and ( max-width: $smartphone + px ) {
+            @media screen and ( max-width: $tablet + px ) {
                 margin-bottom: 10px;
             }
             
@@ -29,6 +29,10 @@
                 width: 8px; height: 8px;
                 background-color: $c-brown;
                 border-radius: 50%;
+                
+                @media screen and ( max-width: $tablet + px ) {
+                    top: 8px;
+                }
             }
         }
     } 

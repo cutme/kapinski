@@ -21,7 +21,9 @@ Pace.on('done', function() {
     // Start top anim
 
     let element = document.getElementsByClassName('o-container')[0];
-        element.addEventListener("transitionend", function(event) {
+       
+       /*
+ element.addEventListener("transitionend", function(event) {
             if (window.getComputedStyle(element).getPropertyValue('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
             
                 if (document.getElementsByClassName('c-top__header')[0].getElementsByClassName('o-btn')[0]) {
@@ -40,12 +42,13 @@ Pace.on('done', function() {
                     document.getElementsByClassName('c-top__intro')[0].classList.add('show');
                 }
                 
-                if (document.getElementsByClassName('c-logo__sign')[0]) {
+  if (document.getElementsByClassName('c-logo__sign')[0]) {
                     document.getElementsByClassName('c-logo__sign')[0].classList.add('show');
                 }
             }            
             
     }, false);
+*/
 });
 
 

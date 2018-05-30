@@ -23,7 +23,7 @@
         background-color: $c-brown;
         padding: 16px 40px;
         letter-spacing: 1px;
-        line-height: 1.4;
+        line-height: 1.7;
         
         @media screen and ( max-width: $smartphone_portrait + px ) {
             padding: 10px 20px;
@@ -55,6 +55,15 @@
         span {
             background-color: white;
             color: $c-brown;
+        }
+    }
+}
+
+button {
+    &.o-btn {
+        span {
+            @extend %flex;
+            @extend %flex-xy;
         }
     }
 }

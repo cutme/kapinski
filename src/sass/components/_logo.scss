@@ -11,10 +11,7 @@
         top: 86px;
         left: 20px;
     }
-    
-    
-    
-    
+
     .pace-done & {
         transition-delay: 2s;
         opacity: 1;
@@ -23,14 +20,16 @@
     &__sign {
         transition-timing-function: ease-out;
         transition-duration: 1000ms;
-        left: -60px; top: 46px;
+        //left: -60px; 
+        left: 85px;
+        top: 46px;
         width: 60px; height: 60px;
         transform-origin: center;
         background: {
             image: url(../img/logo-kapinski--sign.svg);
             repeat: no-repeat;
         }
-        transform: rotate(-300deg);
+        //transform: rotate(-300deg);
         
         @media screen and ( min-width: $tablet_portrait + 1px) {
             position: fixed;
@@ -42,10 +41,12 @@
             
         }
         
-        &.show {
+       /*
+ &.show {
             left: 85px;
             transform: rotate(0);
         }
+*/
     }
     
     &__typo {

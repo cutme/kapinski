@@ -1,18 +1,28 @@
 .c-business {
-    margin-bottom: 320px;
+    //margin-bottom: 100px;
+    
+    //@media screen and ( max-width: $tablet + px ) {
+    //    margin-bottom: 50px;
+    //}
+    
+    padding: 0 0 100px 0;
     
     @media screen and ( max-width: $tablet + px ) {
-        margin-bottom: 50px;
+        padding: 0 0 50px 0;
     }
     
     &__content {
-        width: 1120px;
+        //height: calc(100vh - 200px);
+        //width: 1120px;
+        width: 100%;
         padding-left: 64px;
         
         @media screen and ( max-width: $base + px ) {
             width: 100%;
             padding-left: grid(64, 1120);
         }
+        
+        
     }
     
     &__lead {
@@ -29,19 +39,44 @@
         }
     }
     
+    ul {
+        margin-bottom: 40px;
+    }
+    
     li {
-        font-size: rem(17);
-        
-        
+        font-size: rem(17);        
+    }
+    
+    .o-btn {
+        span {
+            color: white;
+        }
     }
     
     .o-content {
-        background-image: url(../img/bg/business.jpg);
+       // background-image: url(../img/bg/business.jpg);
         padding: 70px 0;
 
         &__main {            
             @media screen and ( min-width: $tablet_portrait + 1px ) {
                 padding-right: 160px;
+            }
+        }
+        
+        @extend %rel;
+        
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: calc(100vh - 200px);
+            background: {
+                image: url(../img/bg/business.jpg);
+                size: cover;
+//                position: left top;
             }
         }
     }

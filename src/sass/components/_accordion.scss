@@ -1,8 +1,11 @@
 .c-accordion {
-    width: 800px;
     
-    @media screen and ( max-width: $wrap3 + px ) {
-        width: 100%;
+    @media screen and ( min-width: $tablet + 1px ) and ( max-width: $base + px ) {
+        padding-right: grid(320);
+    }
+    
+    @media screen and ( min-width: $base + 1px ) {
+        padding-right: 320px;
     }
   
     i {
