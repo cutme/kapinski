@@ -152,6 +152,7 @@ const scrollTo = function (target, speed, offset) {
 // Hide Menu
 
 const hideMenu = function() {
+
     document.getElementsByClassName('js-hamburger')[0].classList.remove('is-active');
     
     const nav = document.getElementsByClassName('js-navmobile')[0];
@@ -206,6 +207,8 @@ const hideMenu = function() {
                 nav.classList.remove('is-visible');
             }, 2000);
             
+            el.classList.remove('is-active');
+            
         }
     
         const showMenu = function(e) {  
@@ -239,6 +242,22 @@ const hideMenu = function() {
         }
 
         el.addEventListener('click', showMenu);
+     
+     
+        // Hide menu on ESC
+        
+        document.addEventListener('keydown', function(evt) {
+           // evt = evt || window.event;
+            var isEscape = false;
+            if ("key" in evt) {
+                isEscape = (evt.key == "Escape" || evt.key == "Esc");
+            } else {
+                isEscape = (evt.keyCode == 27);
+            }
+            if (isEscape) {
+                hideMenu();
+            }
+        });
        
     }
     
@@ -371,7 +390,7 @@ const showonscroll = function() {
             let bottomOfObject = el[i].getBoundingClientRect().top + 50,
                 bottomOfWindow = window.innerHeight;
 
-            if ( bottomOfWindow > bottomOfObject + 100) {
+            if ( bottomOfWindow > bottomOfObject + 50) {
                 el[i].classList.add('anim--loaded');
 			}
 		}
@@ -431,7 +450,7 @@ Pace.on('done', function() {
                 apla.classList.remove('is-visible');
             }, 2000);
             
-            e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
+            //e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
         }
         
         
@@ -440,7 +459,25 @@ Pace.on('done', function() {
         }
         
         apla_close.addEventListener('click', closeApla);
+        
+        
+        document.addEventListener('keydown', function(evt) {
+            
+            var isEscape = false;
+            
+            if ("key" in evt) {
+                isEscape = (evt.key == "Escape" || evt.key == "Esc");
+            } else {
+                isEscape = (evt.keyCode == 27);
+            }
+            if (isEscape) {
+                closeApla();
+            }
+            
+        });       
     }
+    
+    
     
 }).call(this);
 

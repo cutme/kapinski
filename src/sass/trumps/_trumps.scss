@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+.u-alignright {
+    text-align: right;
+}
+
 .u-cols {
     @media screen and ( min-width: $tablet + 1px ) {
         column-count: 2;
@@ -148,3 +152,48 @@
     }
 }
 */
+
+
+
+.line {
+    display: block;
+    line-height: 1;
+}
+
+.typing {
+    display: inline-block;;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 14em;
+    line-height: 1.5;
+
+    &--1 {
+        .anim--loaded & {
+            animation: type 2s steps(60, end);           
+        }
+    }
+
+    &--2 {
+        .anim--loaded & {
+            animation: type2 3s steps(60, end);  
+        }
+    }
+
+    &--3 {
+        .anim--loaded & {
+            animation: type2 4s steps(60, end);  
+        }
+    }
+}
+
+
+
+@keyframes type { 
+    0% { width: 0; }
+} 
+
+@keyframes type2 {
+  0% {width: 0;}
+  50% {width: 0;}
+  100% { width: 100; } 
+} 

@@ -1,9 +1,5 @@
-//import swiper from '../sass/idangerous.swiper.scss';
-
 import Swiper from '../../node_modules/swiper/dist/js/swiper.js';
 import swiper from '../sass/idangerous.swiper2.scss';
-//import swiper from '../sass/idangerous.swiper.scss';
-//import swiper from '../../node_modules/swiper/dist/css/swiper.min.css';
 
 
 
@@ -59,6 +55,7 @@ const practices = function() {
         };
         
         const mySwiper = new Swiper (carousel, {
+            autoplay: true,
             direction: 'vertical',
             navigation: {
                 nextEl: '.js-practice--down',
@@ -81,12 +78,8 @@ const practices = function() {
                     nav_next.classList.remove('is-inactive');
                 },
                 slideChange: function() {
-                    
-                    
                     for (let i = 0; i < ael.length; i++) {
-                    	    
                     	if (isInView(ael[i])) {
-                    	    console.log('f');
                     		ael[i].className += ' anim--loaded';
                     	}
                     }
@@ -94,14 +87,19 @@ const practices = function() {
 
             },
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
             speed: 600,
             slidesOffsetAfter: 100
         }); 
         
-        Pace.on('done', function() {
+        /*
+mySwiper.on('slideChange', function() {
+            mySwiper.update();
+        });
+*/
 
-    
-
+        
+        Pace.on('done', function() {    
             mySwiper.update();
         });
 
@@ -121,6 +119,7 @@ const opinions = function() {
         const carousel = el.getElementsByClassName('js-opinions')[0];
         
         const mySwiper = new Swiper (carousel, {
+            autoplay: true,
             slidesPerView: 'auto',
             speed: 600,
         }); 

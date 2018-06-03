@@ -272,7 +272,8 @@
         
         .c-top__intro {
             max-width: 360px;
-            padding: 50px 0 0 40px;
+            //padding: 50px 0 0 40px;
+            padding: 50px 0 0 0;
             
             @media screen and ( max-width: $desktop + px) {
                 display: block;
@@ -333,4 +334,10 @@
     .o-btn {
         transition-delay: 1.2s;
     }
+    
+    
+
 }
+
+
+
