@@ -70,6 +70,12 @@
         .highlight {
             color: $c-brown;
         }
+        
+        &--blog {
+            @media screen and ( min-width: 1921px ) {
+                left: calc( ((100% - 1280px) / 2) - 100px);
+            }
+        }
     }
     
     &--areas,
