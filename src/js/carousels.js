@@ -44,7 +44,7 @@ const practices = function() {
               nav_prev = el.getElementsByClassName('js-practice--up')[0],
               nav_next = el.getElementsByClassName('js-practice--down')[0];
               
-        const ael = document.getElementsByClassName('anim');
+        const ael = el.getElementsByClassName('anim');
 
         const isInView = function(el) {
         	let bottomOfWindow = (window.pageYOffset || window.scrollY) + window.innerHeight;
