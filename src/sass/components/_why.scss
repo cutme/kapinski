@@ -1,15 +1,25 @@
 .c-why {
-    //overflow: visible !important;
     padding: 100px 0;
+    
+    .o-wrap {
+        @extend %rel;
+        overflow: hidden;
+    }
     
     @media screen and ( max-width: $tablet + px ) {
         padding: 50px 0;
     }
 
     .o-content {
-        @extend %rel;
+    
+        &__main,
+        &__sidebar {
+            @extend %rel;
+        }
+        //@extend %rel;
         
-        &:after {
+        /*
+&:after {
             @extend %abs;
             @extend %abs-after;
             right: 0;
@@ -20,26 +30,13 @@
             background: {
                 image: url(../img/bg/why.jpg);
                 size: cover;
-//                position: left top;
             }
         }
-        
-        
-       // height: calc(100vh - 200px);
-/*
-        background: {
-            image: url(../img/bg/why.jpg);
-            size: auto 100%;
-            position: left top;
-        }
 */
+    
         padding: {
             top: 100px;
             bottom: 100px;
-        }
-        
-        @media screen and ( min-width: $tablet + px ) {
-           // height: calc(100vh - 200px);
         }
         
         @media screen and ( max-width: $tablet_portrait + px ) {
@@ -49,10 +46,14 @@
                 padding-right: 0;
             }
         }
-        
     }
     
     .o-header {
         transform: translateY(20%);
+    }
+    
+    .bcg {
+        height: calc(100vh - 200px);
+        background-image: url(../img/bg/why.jpg);
     }
 }

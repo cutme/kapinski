@@ -482,3 +482,20 @@ Pace.on('done', function() {
 }).call(this);
 
 
+var controller = new ScrollMagic.Controller();
+
+var bcgparallax = document.getElementsByClassName('bcg-parallax');
+
+
+
+for (var i = 0; i < bcgparallax.length; i ++ ) {
+    var bcg = bcgparallax[i].getElementsByClassName('bcg')[0];
+
+    var slideParallaxScene = new ScrollMagic.Scene({
+        triggerElement: bcgparallax[i], 
+        triggerHook: 1,
+        duration: '150%'
+    })
+    .setTween( TweenMax.from(bcg, 1, {y: '-50%', ease:Power0.easeNone}) )
+    .addTo(controller)
+}

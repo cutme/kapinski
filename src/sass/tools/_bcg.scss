@@ -1,0 +1,13 @@
+.bcg {
+    @extend %abs;
+    z-index: 1 !important;
+    left: 320px; top: 0;
+    width: calc(100% - 320px); height: 140%;
+    background: {
+        size: cover;
+    }
+    
+    @media screen and ( max-width: $wrap3 + px) {
+        left: 240px;
+    }
+}

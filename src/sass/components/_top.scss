@@ -266,14 +266,37 @@
     }
     
     &--home {
+        
+
         .c-top__content {
+            @extend %rel;
+            overflow: hidden;
+
+           // background-image: url(../img/bg/top-home.jpg);
+        }
+
+        .bcg {
+            left: 0; top: 0;
+            width: 100%;
             background-image: url(../img/bg/top-home.jpg);
+            
+            @media screen and ( max-width: $wrap3 + px) {
+                left: 0;
+            }
         }
         
         .c-top__intro {
             max-width: 360px;
             //padding: 50px 0 0 40px;
             padding: 50px 0 0 0;
+            transform: translate3d(0, 10px, 0);
+            transition-delay: 3s;
+            opacity: 0;
+            
+            &.anim--loaded {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
             
             @media screen and ( max-width: $desktop + px) {
                 display: block;

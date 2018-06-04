@@ -169,19 +169,19 @@
 
     &--1 {
         .anim--loaded & {
-            animation: type 2s steps(60, end);           
+            animation: type 1s steps(60, end);           
         }
     }
 
     &--2 {
         .anim--loaded & {
-            animation: type2 3s steps(60, end);  
+            animation: type2 2s steps(60, end);  
         }
     }
 
     &--3 {
         .anim--loaded & {
-            animation: type2 4s steps(60, end);  
+            animation: type2 3s steps(60, end);  
         }
     }
 }

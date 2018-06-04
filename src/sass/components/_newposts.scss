@@ -1,16 +1,25 @@
 .c-newposts {
    // margin-bottom: 250px;
-    overflow: hidden;
+    
+    .o-wrap {
+        @extend %rel;
+        overflow: hidden;
+    }
     
     @media screen and ( max-width: $tablet_portrait + px ) {
         margin-bottom: 50px;
     }
 
     .o-content {
-        background-image: url(../img/bg/newposts.jpg);
+        //background-image: url(../img/bg/newposts.jpg);
         padding: {
             top: 210px;
             bottom: 100px;
+        }
+        
+        &__main,
+        &__sidebar {
+            @extend %rel;
         }
         
         &__main {
@@ -29,6 +38,10 @@
         @media screen and ( min-width: $tablet_portrait + 1px ) {
             transform: translateY(-66%);
         }
+    }
+    
+    .bcg {
+        background-image: url(../img/bg/newposts.jpg);
     }
 }
 
