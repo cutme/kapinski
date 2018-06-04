@@ -17,4 +17,12 @@
     [class^="icon-"] {
         font-size: rem(20);
     }
+    
+    a {
+        @extend %anim;
+
+        &:hover {
+            color: $c-blue;
+        }
+    }
 }

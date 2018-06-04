@@ -180,12 +180,17 @@
         
         .icon-printer {
             @extend %abs;
+            @extend %anim;
             right: 0; top: 0;
             font-size: rem(36);
             
             @media screen and ( max-width: $smartphone_portrait + px ) {
                 top: 60px;
                 font-size: rem(30);
+            }
+            
+            &:hover {
+                color: $c-blue;
             }
             
         }
@@ -328,7 +333,12 @@
           }  
           
           a {
+              @extend %anim;
               text-decoration: none;
+              
+                &:hover {
+                    color: $c-blue;
+                }
           }
         }
     }
