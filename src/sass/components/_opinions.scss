@@ -9,7 +9,7 @@
         }
 
         .o-content {
-            background-image: url(../img/bg/opinions.jpg);
+            //background-image: url(../img/bg/opinions.jpg);
             padding: 215px 0 100px 0;
             
             @media screen and ( max-width: $tablet_portrait + px ) {
@@ -23,11 +23,20 @@
             padding-right: 0;
         }
         
+        &__main,
+        &__sidebar {
+            @extend %rel;
+        }
+        
         &__sidebar {
                     
             @media screen and ( max-width: $smartphone_portrait + px) {
                 padding-bottom: 0;
             }
         }
+    }
+    
+    .bcg {
+        background-image: url(../img/bg/opinions.jpg);
     }
 }
