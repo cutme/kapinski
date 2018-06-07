@@ -32,7 +32,7 @@ Pace.on('done', function() {
         
         let el = document.getElementsByClassName('js-kapinskisign')[0];
         
-        el.setAttribute('src', '../img/mk-logo-color.gif?v='+Math.floor(Math.random() * 1001));
+        el.setAttribute('src', 'img/mk-logo-color.gif?v='+Math.floor(Math.random() * 1001));
         
         
     }, 3000);
