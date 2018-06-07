@@ -113,7 +113,7 @@
     
     &--about {
         .c-top__content {
-            background-image: url(../img/bg/top-about.jpg);
+           // background-image: url(../img/bg/top-about.jpg);
         }
         
         .c-top__intro {
@@ -149,7 +149,7 @@
                 display: none;
             }
         }
-        
+
         h1 {
             font-size: rem(54);
             
@@ -164,6 +164,16 @@
             @media screen and ( max-width: $smartphone + px ) {
                 font-size: rem(22);
                 line-height: 1.2;
+            }
+        }
+        
+        .bcg {
+            left: 0; top: 0;
+            width: 100%;
+            background-image: url(../img/bg/top-about.jpg);
+            
+            @media screen and ( max-width: $wrap3 + px) {
+                left: 0;
             }
         }
         
@@ -289,13 +299,10 @@
     }
     
     &--home {
-        
 
         .c-top__content {
             @extend %rel;
             overflow: hidden;
-
-           // background-image: url(../img/bg/top-home.jpg);
         }
 
         .bcg {
