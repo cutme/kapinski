@@ -18,15 +18,18 @@
     }
     
     &__sign {
+/*
         transition-timing-function: ease-out;
         transition-duration: 1000ms;
+*/
         //left: -60px; 
         left: 85px;
         top: 46px;
-        width: 60px; height: 60px;
-        transform-origin: center;
+        width: 62px; height: 62px;
+        transition-delay: 10s;
         background: {
-            image: url(../img/logo-kapinski--sign.svg);
+            //image: url(../img/mk-logo-color.gif);
+            //image: url(../img/logo-kapinski--sign.svg);
             repeat: no-repeat;
         }
         //transform: rotate(-300deg);
@@ -41,12 +44,14 @@
             
         }
         
-       /*
- &.show {
-            left: 85px;
-            transform: rotate(0);
+        .pace-done & {
+            
         }
-*/
+        
+
+        &.show {
+            //background-image: url(../img/mk-logo-color.gif);
+        }
     }
     
     &__typo {

@@ -21,12 +21,41 @@ Pace.on('done', function() {
     // Start top anim
 
     let element = document.getElementsByClassName('o-container')[0];
+    
+    
+    setTimeout(function() {
+        
+        if (document.getElementsByClassName('c-logo__sign')[0]) {
+            document.getElementsByClassName('c-logo__sign')[0].classList.add('show');
+        }
+        
+        
+        let el = document.getElementsByClassName('js-kapinskisign')[0];
+        
+        el.setAttribute('src', '../img/mk-logo-color.gif?v='+Math.floor(Math.random() * 1001));
+        
+        
+    }, 3000);
+    
+    
        
-       /*
- element.addEventListener("transitionend", function(event) {
-            if (window.getComputedStyle(element).getPropertyValue('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
+   // element.addEventListener("transitionend", function(event) {
+   //     if (window.getComputedStyle(element).getPropertyValue('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
+          //  alert('s');
             
-                if (document.getElementsByClassName('c-top__header')[0].getElementsByClassName('o-btn')[0]) {
+            
+            
+            
+                /*
+if (document.getElementsByClassName('c-logo__sign')[0]) {
+                    document.getElementsByClassName('c-logo__sign')[0].classList.add('show');
+                }
+*/
+
+                
+            
+               /*
+ if (document.getElementsByClassName('c-top__header')[0].getElementsByClassName('o-btn')[0]) {
                     document.getElementsByClassName('c-top__header')[0].getElementsByClassName('o-btn')[0].classList.add('show');
                 }
                 
@@ -45,10 +74,11 @@ Pace.on('done', function() {
   if (document.getElementsByClassName('c-logo__sign')[0]) {
                     document.getElementsByClassName('c-logo__sign')[0].classList.add('show');
                 }
-            }            
-            
-    }, false);
 */
+            //}            
+            
+   // }, false);
+
 
 
     
