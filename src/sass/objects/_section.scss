@@ -4,7 +4,7 @@
 //    margin-bottom: 150px;
 
     &:not(.o-section--autoheight) {
-        min-height: 100vh;
+      //  min-height: 100vh;
     }
     
     @media screen and ( max-width: $tablet_portrait + px ) {
