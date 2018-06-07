@@ -55,7 +55,9 @@ const practices = function() {
         };
         
         const mySwiper = new Swiper (carousel, {
-            autoplay: true,
+            autoplay: {
+                delay: 5000,
+            },
             direction: 'vertical',
             navigation: {
                 nextEl: '.js-practice--down',
@@ -88,7 +90,7 @@ const practices = function() {
             },
             slidesPerView: 'auto',
             slidesPerGroup: 3,
-            speed: 600,
+            speed: 1200,
             slidesOffsetAfter: 100
         }); 
         
