@@ -1,5 +1,5 @@
 .c-facilities {
-    margin-bottom: 220px;
+    margin-bottom: 80px;
     
     
     @media screen and ( max-width: $tablet_portrait + px ) {
@@ -46,6 +46,8 @@
                 @media screen and ( max-width: $smartphone + px ) {
                     margin-right: 0;
                 }
+                
+                
             }
         }
         
@@ -65,6 +67,10 @@
         @media screen and ( max-width: $smartphone + px ) {
             font-size: rem(16);
         }
+    }
+    
+    &__kpnp {
+        padding-top: 40px;
     }
     
     &__lead {

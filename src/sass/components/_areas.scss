@@ -91,9 +91,19 @@
     }
     
     &__try {
-        margin-bottom: 100px;
+        margin-bottom: -80px;
         padding: 60px 80px 0 0;
         text-align: center;
+        
+        @media screen and ( max-width: $base + px ) {
+            margin-bottom: get-vw-base(-80);
+            padding-top: get-vw-base(60);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            margin-bottom: get-vw-tablet(-80);
+            padding-top: get-vw-tablet(60);
+        }
     }
 
     .o-header__secondary {

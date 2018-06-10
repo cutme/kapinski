@@ -2,7 +2,15 @@
 let scroll_pos = window.pageYOffset || window.scrollY;
 let removebg, hidenav;
 
+var controller = new ScrollMagic.Controller();
 
+const isInView = function(el) {
+	let bottomOfWindow = (window.pageYOffset || window.scrollY) + window.innerHeight;
+	
+	if ( el.getBoundingClientRect().top + (window.pageYOffset || window.scrollY) < bottomOfWindow) {
+		return true;
+	}
+};
 
 // Get scroll position
 
@@ -122,7 +130,7 @@ const scrollTo = function (target, speed, offset) {
             document.body.removeAttribute('style');
 	    
 	        let target = window_pos + obj.getBoundingClientRect().top - offset;
-	        scrollTo(target, speed_calculate(target), -50);
+	        scrollTo(target, speed_calculate(target), 0);
 	    }
         
         if (window.e) {
@@ -273,16 +281,16 @@ const hideMenu = function() {
     
     if (el) {
         
-        const btn = el.getElementsByClassName('js-next')[0],
-              btnName = btn.getElementsByTagName('a')[0],
-              nextSection = document.getElementsByClassName('js-nextSection')[0],
-              logo = el.getElementsByClassName('js-gotop')[0];
-            
-        let btnNames = [btn.getAttribute('data-next'), btn.getAttribute('data-prev')],
-            target = 0;
+        const btn = el.getElementsByClassName('js-btn'),
+              btnPrev = el.getElementsByClassName('js-prev')[0],
+              btnNext = el.getElementsByClassName('js-next')[0],
+              logo = el.getElementsByClassName('js-gotop')[0],
+              section = document.getElementsByClassName('js-section');
 
+        let scrollEnd = false;
 
-        const btnNext = function() {
+        /*
+const btnNext = function() {
             btnName.innerHTML = btnNames[0];
             btn.classList.remove('is-active');
         }
@@ -291,18 +299,36 @@ const hideMenu = function() {
             btnName.innerHTML = btnNames[1];
             btn.classList.add('is-active');
         }
+*/
 
-        const nextPrev = function(e) {
+        const move_page = function(e) {
         
             hideMenu();
-        
-            target = 0;
-        
-            if (!e.currentTarget.classList.contains('is-active')) {
-                target = nextSection.getBoundingClientRect().top;
+            
+            let window_pos = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            
+            if (e.currentTarget.classList.contains('js-prev')) {
+            
+                let target = document.getElementsByClassName('is-scrolling')[0].previousElementSibling;
+
+                TweenMax.to(window, 1, {
+                    scrollTo: { 
+                        y: window_pos + target.getBoundingClientRect().top, 
+                        ease: Power2.easeOut
+                    }
+                });
+                
+            } else {
+                
+                let target = document.getElementsByClassName('is-scrolling')[0].nextElementSibling;
+                
+                TweenMax.to(window, 1, {
+                    scrollTo: { 
+                        y: window_pos + target.getBoundingClientRect().top, 
+                        ease: Power2.easeOut
+                    }
+                });
             }
-    	          
-    	    scrollTo(target, .5, -100);
     	    
     	    e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
         }
@@ -329,23 +355,22 @@ const hideMenu = function() {
             window.addEventListener('scroll', function() {
             
                 if (scroll_pos > window.innerHeight / 2) {
-                    if (!btn.classList.contains('is-active')) {
-                        btnPrev();
-                    }
-                    
+                
+                    btnPrev.classList.add('is-visible');
+                                 
                     showHamburger();
                     
                 } else {
-                    if (btn.classList.contains('is-active')) {
-                        btnNext();
-                    }
+                    btnPrev.classList.remove('is-visible');
                     
                     hideHamburger();
                 }
             }); 
         };
 
-        btn.addEventListener('click', nextPrev);
+        for (let i = 0; i < btn.length; i ++) {
+            btn[i].addEventListener('click', move_page);
+        }
         
         logo.addEventListener('click', function(e) {
             scrollTo(0, .5, 0);
@@ -353,6 +378,53 @@ const hideMenu = function() {
         });
 
         posAction();
+        
+        
+        for (var j = 0; j < section.length; j ++ ) {
+        
+            var sectionsScene = new ScrollMagic.Scene({
+                triggerElement: section[j], 
+                triggerHook: 1,
+                offset: 100
+            })
+
+            .on('enter', function(e) {
+            
+                for (let k = 0; k < section.length; k ++) {
+                    
+                    section[k].classList.remove('is-scrolling');
+                    e.target.triggerElement().classList.add('is-scrolling');
+                    
+                }                
+            })
+            
+            .on('leave', function(e) {
+                
+                document.getElementsByClassName('is-scrolling')[0].classList.remove('is-scrolling');
+                e.target.triggerElement().previousElementSibling.classList.add('is-scrolling');
+            })
+            
+            .addTo(controller)
+        }
+        
+        
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                    
+                if (scrollEnd != true) {
+                    scrollEnd = true;
+
+                    btnNext.classList.remove('is-visible');
+                    btnPrev.classList.add('move-down');
+
+                }
+            } else {
+                scrollEnd = false;
+                
+                btnNext.classList.add('is-visible');
+                btnPrev.classList.remove('move-down');
+            }
+        };
     }
     
 }).call(this);
@@ -364,7 +436,7 @@ const hideMenu = function() {
 const showonscroll = function() {
 
     const el = document.getElementsByClassName('anim');
-    
+
     const isInView = function(el) {
 		let bottomOfWindow = (window.pageYOffset || window.scrollY) + window.innerHeight;
 		
@@ -372,16 +444,13 @@ const showonscroll = function() {
 			return true;
 		}
 	};
-	
-//	let lastScrollTop = 0;
-	
+
 	for (let i = 0; i < el.length; i++) {
 	    
 		if (isInView(el[i])) {
 			el[i].className += ' anim--loaded';
 		}
 	}
-   
 
 	function init() {
 
@@ -397,7 +466,6 @@ const showonscroll = function() {
 	}
 
 	window.addEventListener('scroll', init);
-	
 };
 
 Pace.on('done', function() {   
@@ -406,7 +474,7 @@ Pace.on('done', function() {
         
         showonscroll();
         
-    }, 2000);
+    }, 100);
 });
 
 
@@ -482,10 +550,9 @@ Pace.on('done', function() {
 }).call(this);
 
 
-var controller = new ScrollMagic.Controller();
+
 
 var bcgparallax = document.getElementsByClassName('bcg-parallax');
-
 
 
 for (var i = 0; i < bcgparallax.length; i ++ ) {
@@ -499,3 +566,5 @@ for (var i = 0; i < bcgparallax.length; i ++ ) {
     .setTween( TweenMax.from(bcg, 1, {y: '-50%', ease:Power0.easeNone}) )
     .addTo(controller)
 }
+
+

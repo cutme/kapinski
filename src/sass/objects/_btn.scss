@@ -13,8 +13,41 @@
     color: white;
     
     @media screen and ( max-width: $smartphone_portrait + px ) {
-        font-size: rem(16);
+       // font-size: rem(16);
     }
+    
+    @media screen and ( max-width: $base + px ) {
+        font-size: get-vw-base(18);
+    }
+    
+    @media screen and ( max-width: $wrap1 + px ) {
+        font-size: get-vw-wrap1(18);
+    }
+    
+    @media screen and ( max-width: $wrap2 + px ) {
+        font-size: get-vw-wrap2(18);
+    }
+    
+    @media screen and ( max-width: $wrap3 + px ) {
+        font-size: get-vw-wrap3(18);
+    }
+    
+    @media screen and ( max-width: $tablet + px ) {
+        font-size: get-vw-tablet(18);
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        font-size: get-vw-tablet-portrait(18);
+    }
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        font-size: get-vw-tablet-smartphone(18);
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        font-size: get-vw-smartphone-portrait(18);
+    }
+    
     
     span {
         @extend %flex;
@@ -26,6 +59,7 @@
         line-height: 1.7;
         
         @media screen and ( max-width: $smartphone_portrait + px ) {
+            min-height: 54px;
             padding: 10px 20px;
         }
         

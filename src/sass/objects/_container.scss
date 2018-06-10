@@ -7,7 +7,8 @@
 	//transform: translateX(100%);
     //opacity: 0;
     
-    &:after,
+   /*
+ &:after,
     &:before {
         @extend %anim-slow;
         transform-origin: right;
@@ -37,6 +38,7 @@
         transition-delay: .8s;
         background: $c-gray1;
     }
+*/
 
 	.pace-done & {
 	    //opacity: 1;

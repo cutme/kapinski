@@ -12,24 +12,26 @@
 
 	<div itemprop="mainContentOfPage" role="main" class="o-container">
 
-        <div class="c-top c-top--areasingle">
+        <div class="c-top c-top--areasingle js-section bcg-parallax">
             <div class="c-top__content">
             
                 <nav class="c-nav c-nav--top">
                     <%= require('html-loader!./includes/nav.html') %>
                 </nav>
                 
-                <div class="c-top__header">
+                <div class="c-top__header anim anim--upslow">
                     <h1>
-                        Obsługa prawna<br>
-                        inwestycji budowlanych
+                        <span class="line"><span class="typing typing--1">Obsługa prawna</span></span>
+                        <span class="line"><span class="typing typing--2">inwestycji budowlanych</span></span>
                     </h1>                    
                 </div>
             </div>
+            
+            <div class="bcg"></div>
         </div>
         
                 
-        <div class="o-section c-areas js-nextSection">
+        <div class="o-section c-areas js-section">
             <div class="o-wrap o-wrap--indent">
         
                 <div class="o-content o-content--article">
@@ -121,7 +123,7 @@ Nullam cursus pulvinar placerat. Nulla nulla lectus, gravida vitae laoreet a, co
         </div>
         
         
-        <div class="o-section c-opinions c-opinions--bg">
+        <div class="o-section c-opinions c-opinions--bg js-section">
             <%= require('html-loader!./includes/opinions.html') %>
         </div>
 

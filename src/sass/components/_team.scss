@@ -79,12 +79,48 @@
     
     &__member {
         &:not(:last-of-type) {
-            margin-bottom: 250px;
+            margin-bottom: 190px;
+        }
+        
+        @media screen and ( max-width: $base + px ) {
+            &:not(:last-of-type) {
+                margin-bottom: get-vw-base(100);
+            }
+        }
+        
+        @media screen and ( max-width: $wrap1 + px ) {
+            &:not(:last-of-type) {
+                margin-bottom: get-vw-wrap1(100);
+            }
+        }
+        
+        @media screen and ( max-width: $wrap2 + px ) {
+            &:not(:last-of-type) {
+                margin-bottom: get-vw-wrap2(100);
+            }
+        }
+        
+        @media screen and ( max-width: $wrap3 + px ) {
+            &:not(:last-of-type) {
+                margin-bottom: get-vw-wrap3(100);
+            }
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            &:not(:last-of-type) {
+                margin-bottom: get-vw-tablet(100);
+            }
         }
         
         @media screen and ( max-width: $tablet_portrait + px ) {
             &:not(:last-of-type) {
-                margin-bottom: 150px;
+                margin-bottom: get-vw-tablet-portrait(100);
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            &:not(:last-of-type) {
+                margin-bottom: get-vw-tablet-smartphone(100);
             }
         }
         
@@ -96,6 +132,10 @@
                 @media screen and ( min-width: $smartphone + 1px ) {
                     margin-top: -90px;
                     padding: 0 20px 20px 0;
+                }
+                
+                @media screen and ( max-width: $smartphone + px ) {
+                    margin-top: get-vw-tablet-smartphone(-100);
                 }
             }
             
@@ -111,8 +151,13 @@
                 margin-top: -100px;
                 padding: 0 0 20px 40px;
                 
-                @media screen and ( max-width: $smartphone + px ) {
+                @media screen and ( min-width: $smartphone + 1px ) {
+                    margin-top: -90px;
                     padding: 0 0 20px 20px;
+                }
+                
+                @media screen and ( max-width: $smartphone + px ) {
+                    margin-top: get-vw-tablet-smartphone(-100);
                 }
             }        
                 
@@ -162,10 +207,15 @@
             }
         }
     }
-    
+            
     .o-content {
     
         &__main {
+        
+            @media screen and ( min-width: $tablet + 1px ) {
+                padding-top: 190px;
+            }
+
             @media screen and ( max-width: $desktop + px ) {
                 padding-left: 40px;
             }
@@ -174,15 +224,13 @@
         &__sidebar {
             width: 320px;
             
+            @media screen and ( min-width: $tablet + 1px ) {
+                padding-top: 20px;
+            }
+            
             @media screen and ( max-width: $wrap2 + px ) {
                 width: grid(320, $wrap2);
             }
-        }
-    }
-    
-    .o-header {
-        @media screen and ( min-width: $tablet_portrait + 1px ) {
-            transform: translateY(-220%);        
         }
     }
 }

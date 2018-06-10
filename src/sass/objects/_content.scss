@@ -5,6 +5,11 @@
     @media screen and ( min-width: $tablet + 1px ) {
         display: flex;
     }
+    
+    &__main,
+    &__sidebar {
+        @extend %rel;
+    }
 
     &__main {
         padding-right: 160px; 
@@ -36,7 +41,7 @@
         
         @media screen and ( max-width: $tablet + px ) {
             width: 100%;
-            padding-right: get-vw-tablet(160);
+            padding-right: 90px;
             padding-bottom: 60px;
             padding-left: 40px;
         }
@@ -54,7 +59,6 @@
         }
 
         .o-wrap--indent & {
-            
             
             @media screen and ( max-width: $wrap1 + px ) {
                 width: grid(480, $wrap1 - 320);

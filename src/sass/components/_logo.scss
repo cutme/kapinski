@@ -13,26 +13,15 @@
     }
 
     .pace-done & {
-        transition-delay: 2s;
+        transition-delay: 100ms;
         opacity: 1;
     }
     
     &__sign {
-/*
-        transition-timing-function: ease-out;
-        transition-duration: 1000ms;
-*/
-        //left: -60px; 
         left: 85px;
         top: 46px;
         width: 62px; height: 62px;
-        transition-delay: 10s;
-        background: {
-            //image: url(../img/mk-logo-color.gif);
-            //image: url(../img/logo-kapinski--sign.svg);
-            repeat: no-repeat;
-        }
-        //transform: rotate(-300deg);
+        background-repeat: no-repeat;
         
         @media screen and ( min-width: $tablet_portrait + 1px) {
             position: fixed;
@@ -41,16 +30,6 @@
         @media screen and ( max-width: $smartphone_portrait + px) {
             left: -40px;
             width: 40px; height: 40px;
-            
-        }
-        
-        .pace-done & {
-            
-        }
-        
-
-        &.show {
-            //background-image: url(../img/mk-logo-color.gif);
         }
     }
     

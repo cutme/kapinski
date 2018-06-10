@@ -12,7 +12,7 @@
 
 	<div itemprop="mainContentOfPage" role="main" class="o-container">	    
 
-        <div class="c-top c-top--blog">
+        <div class="c-top c-top--blog js-section bcg-parallax">
             <div class="c-top__content">
             
                 <nav class="c-nav c-nav--top">
@@ -20,7 +20,10 @@
                 </nav>
                 
                 <div class="c-top__header c-top__header--blog">
-                    <h1 class="anim anim--upslow">Blog o prawie<br><span class="highlight">w biznesie</span></h1>
+                    <h1 class="anim anim--upslow">
+                        <span class="line"><span class="typing typing--1">Blog o prawie</span></span>
+                        <span class="line"><span class="typing typing--2"><span class="highlight">w biznesie</span></span></span>
+                    </h1>
                     
                     <span class="c-top__intro anim anim--upslow">
                         Przeglądaj nasze spostrzeżenia, obserwacje i doświadczenia
@@ -28,10 +31,12 @@ związane z wykorzystywaniem prawa w biznesie.
                     </span>                    
                 </div>
             </div>
+            
+            <div class="bcg"></div>
         </div>
         
         
-        <div class="c-blog o-section js-nextSection" id="areas">
+        <div class="c-blog o-section js-section" id="areas">
             <div class="o-wrap o-wrap--indent">
             
                 <%= require('html-loader!./includes/blog-categories.html') %>

@@ -25,14 +25,10 @@
             &:before {
                 @extend %abs;
                 @extend %abs-after;
-                left: 0; top: 10px;
+                left: 0; top: 8px;
                 width: 8px; height: 8px;
                 background-color: $c-brown;
                 border-radius: 50%;
-                
-                @media screen and ( max-width: $tablet + px ) {
-                    top: 8px;
-                }
             }
         }
     } 

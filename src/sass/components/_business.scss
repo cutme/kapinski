@@ -1,8 +1,8 @@
 .c-business {    
-    padding: 0 0 100px 0;
+    //padding: 0 0 100px 0;
     
     @media screen and ( max-width: $tablet + px ) {
-        padding: 0 0 50px 0;
+      //  padding: 0 0 50px 0;
     }
     
     &__content {
@@ -44,7 +44,7 @@
     }
     
     .o-content {
-        padding: 70px 0;
+        //padding: 70px 0;
         
         &__main,
         &__sidebar {
@@ -53,9 +53,18 @@
 
         &__main {            
             @media screen and ( min-width: $tablet_portrait + 1px ) {
-                padding-right: 160px;
+                padding: {
+                    right: 160px;
+                    top: 70px;
+                }
             }
-        }        
+        }
+        
+        &__sidebar {
+            @media screen and ( min-width: $tablet + 1px ) {
+                padding-top: 140px;
+            }
+        }      
     }
     
     .bcg {

@@ -1,20 +1,13 @@
 .c-why {
-    padding: 100px 0;
-
-    @media screen and ( max-width: $tablet + px ) {
-        padding: 50px 0;
-    }
 
     .o-content {
-    
-        &__main,
-        &__sidebar {
-            @extend %rel;
-        }
-    
-        padding: {
-            top: 100px;
-            bottom: 50px;
+        padding-top: 100px;
+        
+        @media screen and ( min-width: $tablet+ 1px ) {
+
+            &__sidebar {
+                padding-top: 40px;
+            }            
         }
         
         @media screen and ( max-width: $tablet_portrait + px ) {
@@ -25,11 +18,7 @@
             }
         }
     }
-    
-    .o-header {
-        transform: translateY(20%);
-    }
-    
+
     .bcg {
         height: calc(100vh - 100px);
         background-image: url(../img/bg/why.jpg);

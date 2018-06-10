@@ -26,8 +26,28 @@
 	@return ($target / $vw-context) * 1vw;
 }
 
+@function get-vw-tablet-portrait($target) {
+	$vw-context: (($tablet_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
 @function get-vw-smartphone($target) {
 	$vw-context: (($smartphone) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-smartphone-portrait($target) {
+	$vw-context: (($smartphone_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-wrap1($target) {
+	$vw-context: ($wrap1 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-wrap2($target) {
+	$vw-context: ($wrap2 * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }
 

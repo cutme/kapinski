@@ -10,9 +10,14 @@
     width: calc(100% - 320px); height: 140%;
     background: {
         size: cover;
+        position: center top;
     }
     
     @media screen and ( max-width: $wrap3 + px) {
         left: 240px;
+    }
+    
+    @media screen and ( max-width: $tablet + px) {
+        width: calc(100% - 240px);
     }
 }

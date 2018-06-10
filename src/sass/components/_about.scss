@@ -1,14 +1,7 @@
 .c-about {
     @extend %bg-cover;
-    background-image: url(../img/bg/about-long.jpg);
-    background-position: center top;
-    padding-top: 400px;
-    
-    @media screen and ( max-width: $tablet_portrait + px ) {
-        padding-top: 200px;
-    }
-    
-    @media screen and ( max-width: $smartphone + px ) {
-        padding-top: 100px;
+    background: {
+        image: url(../img/bg/about-long.jpg);
+        position: center top;
     }
 }

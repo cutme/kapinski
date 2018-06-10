@@ -13,7 +13,7 @@ Pace.on('done', function() {
     
     setTimeout(function() {
         document.body.removeAttribute('style');
-    }, 4000);
+    }, 1000);
 
 
     console.log('pace loaded');
@@ -102,8 +102,11 @@ WebFont.load({
 });
 
 
-require('./js/carousels.js');
+
+
 require('./js/framework.js');
+require('./js/carousels.js');
+
 
 
 

@@ -1,10 +1,13 @@
 .o-section {
     
     padding: 100px 0;
-//    margin-bottom: 150px;
 
-    &:not(.o-section--autoheight) {
-      //  min-height: 100vh;
+    @media screen and ( max-width: $base + px ) {
+        padding: get-vw-base(100) 0;
+    }
+    
+    @media screen and ( max-width: $tablet + px ) {
+        padding: get-vw-tablet(100) 0;
     }
     
     @media screen and ( max-width: $tablet_portrait + px ) {

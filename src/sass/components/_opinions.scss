@@ -1,19 +1,16 @@
 .c-opinions {
-    overflow: hidden;
-    
+
     .bcg {
         display: none;
     }
 
     &--bg {
-        margin-bottom: 360px;
         
         @media screen and ( max-width: $tablet_portrait + px ) {
             margin-bottom: 50px;
         }
 
         .o-content {
-            //background-image: url(../img/bg/opinions.jpg);
             padding: 215px 0 100px 0;
             
             @media screen and ( max-width: $tablet_portrait + px ) {
@@ -27,8 +24,13 @@
     }
 
     .o-content {
+        padding: 70px 0 100px 0;
+
         &__main {
-            padding-right: 0;
+            
+            @media screen and ( min-width: $tablet + 1px ) {
+                padding-top: 100px;
+            }
         }
         
         &__main,
@@ -43,8 +45,28 @@
             }
         }
     }
-    
+
     .bcg {
         background-image: url(../img/bg/opinions.jpg);
+    }
+    
+    .swiper-pagination {
+        @extend %flex;
+        padding-left: 65px;
+    }
+    
+    .swiper-pagination-bullet {
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: $c-gray1;
+        border-radius: 50%;
+        margin-right: 15px;
+        border: 2px solid $c-brown;
+        cursor: pointer;
+        
+        &.swiper-pagination-bullet-active {
+            background-color: $c-brown;
+        }
     }
 }

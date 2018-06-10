@@ -53,6 +53,17 @@
         
         &--bottom {
             bottom: 100px;
+            visibility: hidden;
+            opacity: 0;
+            
+            &.is-visible {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            &.move-down {
+                bottom: 50px !important;
+            }
             
             &:before {
                 @extend %abs;
@@ -68,8 +79,8 @@
                 content: "\e901";
             }
             
-            &.is-active {
-                bottom: 50px;
+            &.is-back {
+                bottom: 200px;
 
                 &:before {
                     left: 90px;

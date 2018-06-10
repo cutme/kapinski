@@ -110,7 +110,7 @@
 
     .o-header {
         @media screen and ( min-width: $tablet + 1px ) {
-            transform: translateY(-66%);
+           // transform: translateY(-66%);
         }
     }
 }

@@ -147,6 +147,7 @@
 	@extend %rel;
 	display: inline-block;
 	padding-bottom: 20px;
+	vertical-align: top;
 }
 
 .link--kukuri {
@@ -199,15 +200,6 @@
     	}
     }
 }
-
-
-
-.link--kukuri::before {
-	//width: 100%;
-	
-	
-}
-
 
 @keyframes fadeIn {
     0% {

@@ -157,19 +157,6 @@
 .swiper-button-lock {
   display: none;
 }
-.swiper-pagination {
-  position: absolute;
-  text-align: center;
-  -webkit-transition: 300ms opacity;
-  -o-transition: 300ms opacity;
-  transition: 300ms opacity;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  z-index: 10;
-}
-.swiper-pagination.swiper-pagination-hidden {
-  opacity: 0;
-}
 
 
 /* Scrollbar */
@@ -274,8 +261,8 @@
 
 
 .swiper-horiz .swiper-wrapper {
-    @media screen and ( min-width: 1921px) {
+    //@media screen and ( min-width: 1921px) {
         width: 1000px !important;
         //width: calc( 100% - 640px ) !important;
-    }
+    //}
 }
